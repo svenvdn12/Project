@@ -86,6 +86,9 @@
 #header-dropdown-menu {
   max-height: 0px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   background-color: var(--color-secondary);
   transition: max-height var(--transition), padding var(--transition);
 }
@@ -105,6 +108,7 @@
   #page-header {
     border-right: var(--border-primary);
     width: fit-content;
+    box-shadow: var(--shadow-right);
   }
 
   #page-header .header-top {
@@ -117,5 +121,6 @@
 
   #header-dropdown-menu {
     max-height: 100%;
+    text-align: start;
   }
 }
