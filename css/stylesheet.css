@@ -1,8 +1,3 @@
-/* temp font Sem Visser */
-html {
-    font-family: 'Courier New', Courier, monospace;
-}
-
 /* menu styling desktop + mobile */
 header {
     display: flex;
@@ -13,18 +8,6 @@ header {
     /* tempwidth */
     width: 75%;
 }
-#header-list {
-    list-style: none;
-    padding: 0;
-}
-
-@media screen and (min-width: 1000px) {
-    header {
-        text-align: start;
-        justify-content: start;
-    }
-}
-
 /* footer styling desktop + mobile */
 footer {
     display: flex;
@@ -36,6 +19,14 @@ footer {
     width: 75%;
     margin: 0 auto;
 }
+
+/* unique */
+
+#header-list {
+    list-style: none;
+    padding: 0;
+}
+
 .footer-section {
     flex: 1;
 }
@@ -55,13 +46,13 @@ footer {
     justify-content: center;
     gap: 2rem;
 }
-.footer-link-svg {
-    display: block;
-    width: 30px;
-}
 
 /* temp breakpoint */
 @media screen and (min-width: 1000px) {
+    header {
+        text-align: start;
+        justify-content: start;
+    }
     footer {
         flex-direction: row;
         justify-content: center;

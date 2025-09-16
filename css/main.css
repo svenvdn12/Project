@@ -62,12 +62,27 @@ body {
 header {
   padding: var(--padding-gap-primary);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   border-bottom: var(--border-primary);
   background-color: var(--color-secondary);
   box-shadow: var(--shadow-bottom);
+}
+
+#header-top-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#header-list {
+    /* temp none */
+    display: none;
+  list-style: none;
+  padding: 0;
 }
 
 /* hamburger menu */
@@ -148,11 +163,36 @@ main {
 footer {
   display: flex;
   flex-direction: column;
+
+  /* Sem */
+  align-items: center;
+  text-align: center;
+
   gap: var(--padding-gap-primary);
   border-top: var(--border-primary);
   padding: var(--padding-gap-primary);
   background-color: var(--color-secondary);
   box-shadow: var(--shadow-top);
+}
+
+.footer-section {
+  flex: 1;
+}
+#footer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+#footer-list li::before {
+  content: "-";
+}
+#footer-contact-icon-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
 }
 
 /* html element styles */
