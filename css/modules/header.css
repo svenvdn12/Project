@@ -1,0 +1,121 @@
+#page-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--color-secondary);
+}
+
+#page-header:has(#hamburger-toggle:checked) {
+  min-height: 100vh;
+}
+
+#page-header .header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--border-primary);
+  box-shadow: var(--shadow-bottom);
+  background-color: var(--color-secondary);
+  padding: var(--padding-gap-primary);
+}
+
+/* hamburger toggle */
+.hamburger-toggle-wrapper {
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+#hamburger-toggle {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.hamburger-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  user-select: none;
+  pointer-events: none;
+  transition: transform var(--transition);
+}
+
+.hamburger-icon .line {
+  width: 100%;
+  height: 4px;
+  background-color: var(--text-color-primary);
+  transform-origin: center center;
+  transition: transform var(--transition);
+}
+
+.hamburger-icon .line.top {
+  transform-origin: top left;
+}
+
+.hamburger-icon .line.bottom {
+  transform-origin: bottom left;
+}
+
+.hamburger-toggle-wrapper:has(input:checked) .hamburger-icon {
+  transform: translateX(25%);
+}
+
+.hamburger-toggle-wrapper:has(input:checked) .line.top {
+  transform: rotate(45deg);
+  width: 24.3px;
+}
+
+.hamburger-toggle-wrapper:has(input:checked) .line.middle {
+  transform: scale(0);
+}
+
+.hamburger-toggle-wrapper:has(input:checked) .line.bottom {
+  transform: rotate(-45deg);
+  width: 24.3px;
+}
+
+/* dropdown menu */
+#header-dropdown-menu {
+  max-height: 0px;
+  overflow: hidden;
+  background-color: var(--color-secondary);
+  transition: max-height var(--transition), padding var(--transition);
+}
+
+#header-dropdown-menu.shown {
+  padding: var(--padding-gap-primary);
+  max-height: 100%;
+  height: 100%;
+}
+
+#container:has(#hamburger-toggle:checked) {
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+@media screen and (min-width: 1000px) {
+  #page-header {
+    border-right: var(--border-primary);
+    width: fit-content;
+  }
+
+  #page-header .header-top {
+    border: none;
+  }
+
+  .hamburger-toggle-wrapper {
+    display: none;
+  }
+
+  #header-dropdown-menu {
+    max-height: 100%;
+  }
+}

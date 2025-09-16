@@ -9,12 +9,17 @@
         <meta name="description" content="php base">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/script.js" defer></script>
+        <link rel="stylesheet" href="css/modules/header.css">
+        <script src="js/header-dropdown-menu-toggle.js" defer></script>
     </head>
     <body>
-        <?php include_once('views/header.php'); ?>
-        <main>
-        </main>
-        <?php include_once('views/footer.php'); ?>
+        <div id="container">
+            <?php include_once('views/header.php'); ?>
+            <div id="page-content-container">
+                <main>
+                </main>
+                <?php include_once('views/footer.php'); ?>
+            </div>
+        </div>
     </body>
 </html>
