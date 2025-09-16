@@ -1,0 +1,323 @@
+:root {
+  /* colors */
+  --color-primary: #2231b4;
+  --color-secondary: #000060;
+  --color-accent: #ff611b;
+  --color-accent-hover: #c34400;
+
+  /* typography */
+  --text-color-primary: #ffffff;
+  --text-color-secondary: #ff611b;
+  --font-size-s: 14px;
+  --font-size-m: 15px;
+  --font-size-l: 16px;
+  --font-size-xl: 32px;
+
+  /* spacing */
+  --padding-gap-primary: 20px;
+  --padding-gap-secondary: 50px;
+  --padding-btn: 10px 20px;
+
+  /* borders */
+  --border-primary: 5px solid #ffffff;
+  --border-primary-accent: 5px solid #ff611b;
+  --border-secondary: 1px solid #ffffff;
+  --border-secondary-accent: 1px solid #ff611b;
+
+  /* transition(s)? */
+  --transition: 0.2s ease;
+
+  /* shadows? */
+  --shadow-top: 0px -5px 10px rgba(0, 0, 0, 0.2);
+  --shadow-bottom: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@font-face {
+  font-family: "azeret-mono";
+  src: url(../fonts/azeret-mono/AzeretMono-VariableFont_wght.ttf)
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--color-primary);
+  color: var(--text-color-primary);
+  font-family: "azeret-mono", monospace;
+  font-size: var(--font-size-s);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* header */
+header {
+  padding: var(--padding-gap-primary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--border-primary);
+  background-color: var(--color-secondary);
+  box-shadow: var(--shadow-bottom);
+}
+
+/* hamburger menu */
+label.hamburger-menu {
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.hamburger-menu input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.hamburger-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+  transition: transform var(--transition);
+}
+
+.hamburger-menu:has(input:checked) .hamburger-icon {
+  transform: translateX(25%);
+}
+
+.hamburger-icon .line {
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  transition: transform var(--transition), width var(--transition);
+}
+
+.hamburger-icon .line-top {
+  transform-origin: top left;
+}
+
+.hamburger-icon .line-middle {
+  transform-origin: center center;
+}
+
+.hamburger-icon .line-bottom {
+  transform-origin: bottom left;
+}
+
+.hamburger-menu:has(input:checked) .line-top {
+  transform: rotate(45deg);
+  width: 24px;
+}
+
+.hamburger-menu:has(input:checked) .line-middle {
+  transform: scale(0);
+}
+
+.hamburger-menu:has(input:checked) .line-bottom {
+  transform: rotate(-46deg);
+  width: 24px;
+}
+
+/* main */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-gap-primary);
+  padding: var(--padding-gap-primary);
+  flex: 1;
+}
+
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-gap-primary);
+  border-top: var(--border-primary);
+  padding: var(--padding-gap-primary);
+  background-color: var(--color-secondary);
+  box-shadow: var(--shadow-top);
+}
+
+/* html element styles */
+/* button */
+button,
+a.btn {
+  background-color: var(--color-accent);
+  font-family: "azeret-mono", monospace;
+  text-decoration: none;
+  color: var(--text-color-primary);
+  border: var(--border-primary);
+  padding: var(--padding-btn);
+  width: fit-content;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: var(--font-size-m);
+  transition: background-color var(--transition), color var(--transition),
+    border var(--transition);
+}
+
+button:hover,
+a.btn:hover {
+  background-color: var(--color-accent-hover);
+  color: var(--text-color-primary);
+}
+
+/* filter button */
+button.filter,
+a.btn.filter,
+button.secondary,
+a.btn.secondary {
+  border: var(--border-secondary);
+  background-color: var(--color-primary);
+}
+
+button.filter:hover,
+a.btn.filter:hover,
+button.filter.active:hover,
+a.btn.filter.active:hover,
+button.secondary:hover,
+a.btn.secondary:hover {
+  border: var(--border-secondary-accent);
+  color: var(--color-accent);
+  background-color: var(--color-primary);
+}
+
+button.filter.active,
+a.btn.filter.active {
+  background-color: var(--color-secondary);
+  border: var(--border-secondary-accent);
+  color: var(--color-accent);
+}
+
+/* flex */
+.flex {
+  display: flex;
+  gap: var(--padding-gap-primary);
+}
+
+.flex.row {
+  flex-direction: row;
+}
+
+.flex.col {
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.align-start {
+  align-items: start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: end;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ul */
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  list-style-type: none;
+  text-align: center;
+}
+
+ul li::before {
+  content: "-";
+  padding-right: 4px;
+  transition: color var(--transition);
+}
+
+ul li:hover::before {
+  color: var(--text-color-secondary);
+}
+
+/* typography */
+a {
+  color: var(--text-color-primary);
+  width: fit-content;
+  transition: color var(--transition), text-decoration-color var(--transition);
+}
+
+a:hover {
+  color: var(--text-color-secondary);
+  text-decoration-color: var(--text-color-secondary);
+}
+
+h1 {
+  font-size: var(--font-size-xl);
+  color: var(--text-color-secondary);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--font-size-l);
+}
+
+section > header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-gap-primary);
+  background-color: var(--color-secondary);
+  border: var(--border-primary);
+  width: 100%;
+}
+
+/* form */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+}
+
+form input {
+  height: 100%;
+  color: var(--color-accent);
+  text-indent: 1em;
+  border-radius: 0px;
+  border: none;
+  flex: 1;
+}
+
+form input::placeholder {
+  color: var(--color-accent);
+}
