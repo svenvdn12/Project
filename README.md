@@ -13,3 +13,12 @@ Please place files in the proper locations wwithin the file structure to keep th
 When unsupported file types are added, please create a new folder in the root of "assets", or in an appropriate subfolder.
 
 ---
+
+---
+
+"hamburger switch close state alignment fix"
+16-09-2025
+
+Fixed the X icon on hamburger switch close state.
+
+---

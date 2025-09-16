@@ -106,12 +106,19 @@ label.hamburger-menu {
   width: 100%;
   height: 4px;
   background-color: #ffffff;
-  transform-origin: center left;
   transition: transform var(--transition), width var(--transition);
+}
+
+.hamburger-icon .line-top {
+  transform-origin: top left;
 }
 
 .hamburger-icon .line-middle {
   transform-origin: center center;
+}
+
+.hamburger-icon .line-bottom {
+  transform-origin: bottom left;
 }
 
 .hamburger-menu:has(input:checked) .line-top {
@@ -124,7 +131,7 @@ label.hamburger-menu {
 }
 
 .hamburger-menu:has(input:checked) .line-bottom {
-  transform: rotate(-45deg);
+  transform: rotate(-46deg);
   width: 24px;
 }
 
