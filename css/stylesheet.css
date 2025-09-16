@@ -49,10 +49,10 @@ footer {
 
 /* temp breakpoint */
 @media screen and (min-width: 1000px) {
-    header {
+    /* header {
         text-align: start;
         justify-content: start;
-    }
+    } */
     footer {
         flex-direction: row;
         justify-content: center;
