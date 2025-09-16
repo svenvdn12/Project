@@ -1,5 +1,5 @@
 <footer>
-    <section class="flex col">
+    <section id="footer-wrapper">
         <section class="footer-section flex col">
             <h2>Pagina's</h2>
             <ul id="footer-list">
