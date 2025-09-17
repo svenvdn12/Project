@@ -2,3 +2,5 @@
 .pretierrc
 #vs code
 VsCode/
+#sass
+sass

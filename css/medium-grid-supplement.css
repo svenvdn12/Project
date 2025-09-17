@@ -1,0 +1,10 @@
+.medium-grid {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 2vh;
+}
+
+.medium-grid > img {
+	align-self: center;
+}

@@ -20,7 +20,7 @@
                 <main>
                     <section>
                         <header>
-                            <h1>TEST HEADING</h1>
+                            <h1>TEST HEADER</h1>
                             <img src="assets/icons/megaphone.svg" alt="megaphone icon">
                         </header>
                     </section>
