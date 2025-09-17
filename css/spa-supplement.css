@@ -1,0 +1,55 @@
+/* Deze class verzorgt de functionaliteit van het parallax systeem zelf
+Tussen elke plx pagina moet een scroll anchor element staan; in mijn voorbeeld gebruik ik een lege <aside class="scroll-anchor divider"> */
+.scroll-anchor {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 85vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: end;
+  scroll-snap-stop: normal;
+  scrollbar-width: none;
+}
+
+/* De plx class geeft stijlregels mee die nodig zijn om het parallax systeem soepel te laten werken met het bestaande ontwerp
+Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
+.plx {
+  height: auto;
+  min-height: 84vh;
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-gap-primary);
+  padding: var(--padding-gap-primary);
+}
+
+.divider {
+  background-color: white;
+  height: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.spa-icon {
+  width: 6vw;
+  height: auto;
+  align-self: center;
+  position: relative;
+}
+
+/* Dit is momenteel even experimenteel - simpel gezged krijgt elke opeenvolgende pagina een iets donkerede background-color via een sass functie */
+.plx-component:nth-of-type(1) {
+  background-color: hsl(234, 68%, 42%);
+}
+
+.plx-component:nth-of-type(2) {
+  background-color: hsl(234, 68%, 34.5%);
+}
+
+.plx-component:nth-of-type(3) {
+  background-color: hsl(234, 68%, 27%);
+}
+
+/*# sourceMappingURL=spa-supplement.css.map */
