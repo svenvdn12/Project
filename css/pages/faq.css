@@ -18,32 +18,12 @@ h2 {
 	font-size: 1.3em;
 }
 
-details {
-	display: flex;
-	flex-direction: column;
-	gap: 1em;
-}
-
-summary,
 p {
 	text-align: center;
 }
 
-summary {
-	list-style-type: none;
-	cursor: pointer;
-}
-
 p {
 	margin-bottom: 0.7em;
-}
-
-summary img {
-	transition: transform 0.2s;
-}
-
-details[open] summary img {
-	transform: rotate(-90deg);
 }
 
 @media screen and (min-width: 1000px) {
@@ -55,11 +35,7 @@ details[open] summary img {
 		align-items: normal;
 	}
 
-	p,
-	summary {
+	p {
 		text-align: left;
-	}
-	summary {
-		width: fit-content;
 	}
 }

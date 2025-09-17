@@ -72,6 +72,7 @@ body {
   gap: var(--padding-gap-primary);
   width: 100%;
   height: 100%;
+  padding-top: 160px;
 }
 
 /* main */
@@ -81,11 +82,15 @@ main {
   gap: var(--padding-gap-primary);
   padding: var(--padding-gap-primary);
   flex: 1;
+  max-width: 2000px; /* ultrawide monitors */
+  margin: 0 auto; /* ultrawide monitors */
 }
 
-/* footer */
-
 /* html element styles */
+hr {
+  width: 100%;
+  border-top: var(--border-primary);
+}
 /* button */
 button,
 .btn {
@@ -253,6 +258,62 @@ form input::placeholder {
   color: var(--color-accent);
 }
 
+/* details / summary */
+details {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: gap var(--transition);
+  z-index: 2;
+}
+
+details:open {
+  gap: var(--padding-gap-primary);
+}
+
+details summary {
+  list-style-type: none;
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+}
+
+details summary::after {
+  content: url(../assets/icons/arrow-right.svg);
+  position: absolute;
+  top: -1px;
+  right: -20px;
+  transition: transform var(--transition);
+}
+
+details:open summary::after {
+  transform: rotate(180deg) translateY(3px);
+}
+
+details .details-content {
+  max-height: 0px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--padding-gap-primary);
+  opacity: 0;
+  transition: max-height var(--transition), opacity var(--transition);
+}
+
+details:open .details-content {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+/* video */
+video {
+  border: var(--border-primary);
+  background-color: var(--color-secondary);
+  aspect-ratio: 16/9;
+}
+
 /* socials wrapper */
 .socials-wrapper {
   display: flex;
@@ -270,11 +331,24 @@ form input::placeholder {
 
   #page-content-container {
     overflow-y: auto;
+    padding-top: 0px;
   }
 
   main {
     padding: var(--padding-gap-secondary);
     gap: var(--padding-gap-secondary);
+  }
+
+  details {
+    margin: 0;
+    width: fit-content;
+    text-align: start;
+    align-items: start;
+  }
+
+  details .details-content {
+    align-items: start;
+    width: fit-content;
   }
 }
 

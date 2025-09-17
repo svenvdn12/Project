@@ -1,0 +1,146 @@
+main {
+    gap: var(--padding-gap-primary);
+}
+
+main > section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-gap-primary);
+    text-align: center;
+}
+
+section.over-ons {
+}
+
+@media screen and (min-width: 1000px) {
+    main > section {
+        align-items: start;
+        text-align: start;
+    }
+}
+
+/* person grid */
+.person-grid {
+    border: var(--border-primary);
+    background-color: var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    /* gap: var(--padding-gap-primary); */
+}
+
+.person-grid .person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--padding-gap-primary);
+    padding: var(--padding-gap-primary);
+    position: relative;
+}
+
+.person-grid .person::after {
+    content: "";
+    position: absolute;
+    left: var(--padding-gap-primary);
+    right: var(--padding-gap-primary);
+    bottom: -5px;
+    height: 5px;
+    background-color: var(--text-color-primary);
+}
+
+.person-grid .person:last-child::after {
+    content: "";
+}
+
+.person-grid .person:not(:first-child) {
+    margin-top: 5px;
+}
+
+.person-grid .person img {
+    aspect-ratio: 1/1;
+    max-width: 100%;
+    height: auto;
+    border: var(--border-primary);
+}
+
+@media screen and (min-width: 1000px) {
+    .person-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0px;
+        padding: 0px;
+    }
+
+    .person-grid .person {
+        display: flex;
+        flex-direction: column;
+        gap: var(--padding-gap-primary);
+        padding: var(--padding-gap-primary);
+        position: relative;
+        flex: 1 1 calc(33.3% - var(--padding-gap-primary));
+    }
+
+    .person-grid .person::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: -5px;
+        height: 5px;
+        background-color: var(--text-color-primary);
+    }
+
+    .person-grid .person::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: -5px;
+        width: 5px;
+        background-color: var(--text-color-primary);
+    }
+
+    .person-grid .person:not(:nth-child(3n+1)) {
+        margin-left: 5px;
+    }
+
+    /* remove top lines */
+    .person-grid .person:nth-child(3n+3)::before {
+        content: none;
+    }
+
+    /* remove bottom lines */
+    .person-grid .person:nth-last-child(1)::after,
+    .person-grid .person:nth-last-child(2)::after,
+    .person-grid .person:nth-last-child(3)::after {
+        content: none;
+    }
+
+    /* top side */
+    .person-grid .person:nth-child(1)::before,
+    .person-grid .person:nth-child(2)::before,
+    .person-grid .person:nth-child(3)::before {
+        top: var(--padding-gap-primary);
+    }
+
+    /* left side */
+    .person-grid .person:nth-child(3n+1)::after {
+        left: var(--padding-gap-primary);
+    }
+
+    /* right side */
+    .person-grid .person:nth-child(3n+3)::after {
+        right: var(--padding-gap-primary);
+    }
+
+    /* bottom side */
+    .person-grid .person:nth-last-child(1)::before,
+    .person-grid .person:nth-last-child(2)::before,
+    .person-grid .person:nth-last-child(3)::before {
+        bottom: var(--padding-gap-primary);
+    }
+
+    /* missing square fix */
+    .person-grid .person:not(:nth-child(3n+3))::after {
+        right: -5px; /* border thickness */
+    }
+}
