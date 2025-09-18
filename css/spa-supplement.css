@@ -13,7 +13,7 @@ Tussen elke plx pagina moet een scroll anchor element staan; in mijn voorbeeld g
   height: 80vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  scroll-snap-align: end;
+  scroll-snap-align: start;
   scroll-snap-stop: normal;
   scrollbar-width: none;
 }
@@ -22,7 +22,7 @@ Tussen elke plx pagina moet een scroll anchor element staan; in mijn voorbeeld g
 Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 .plx {
   height: auto;
-  min-height: 80vh;
+  min-height: 74vh;
   display: flex;
   flex-direction: column;
   gap: var(--padding-gap-primary);
@@ -30,8 +30,9 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 }
 
 .divider {
-  background-color: white;
-  height: 5px;
+  background-color: var(--color-accent);
+  border-bottom: var(--border-primary);
+  height: 200vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -44,16 +45,42 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
   position: relative;
 }
 
+.stop {
+  height: 6vh;
+  scroll-snap-align: end;
+  background-color: var(--color-accent);
+  border-top: 5px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  overflow-x: scroll;
+  scroll-snap-type: mandatory;
+}
+
+.stop h2 {
+  color: white;
+  scroll-snap-align: center;
+  padding-right: 50vw;
+  padding-left: 50vw;
+}
+
+.menu {
+  background-color: var(--color-secondary);
+  padding: var(--padding-gap-primary);
+  height: 25vh;
+}
+
 /* Dit is momenteel even experimenteel - simpel gezged krijgt elke opeenvolgende pagina een iets donkerede background-color via een sass functie */
-.plx-component:nth-of-type(1) {
+.plx-component:nth-of-type(2) {
   background-color: hsl(234, 68%, 42%);
 }
 
-.plx-component:nth-of-type(2) {
+.plx-component:nth-of-type(3) {
   background-color: hsl(234, 68%, 34.5%);
 }
 
-.plx-component:nth-of-type(3) {
+.plx-component:nth-of-type(4) {
   background-color: hsl(234, 68%, 27%);
 }
 
