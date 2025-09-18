@@ -3,6 +3,10 @@ body > header {
   top: 0px;
 }
 
+:root {
+  scroll-behavior: smooth;
+}
+
 /* Deze class verzorgt de functionaliteit van het parallax systeem zelf
 Tussen elke plx pagina moet een scroll anchor element staan; in mijn voorbeeld gebruik ik een lege <aside class="scroll-anchor divider"> */
 .scroll-anchor {
@@ -63,6 +67,7 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
   scroll-snap-align: center;
   padding-right: 50vw;
   padding-left: 50vw;
+  align-self: center;
 }
 
 .menu {
@@ -90,9 +95,6 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
   }
   .plx {
     min-height: 84vh;
-  }
-  .divider {
-    height: 5px;
   }
 }
 

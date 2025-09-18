@@ -15,9 +15,10 @@ button.addEventListener("click", function () {
     isOpen = true;
   }
 });
-
+/*
 for (let stop of document.querySelectorAll(".stop")) {
   for (let page of pages) {
     stop.innerHTML += `<h2>${page}</h2>`;
   }
 }
+*/
