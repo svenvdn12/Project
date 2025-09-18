@@ -1,0 +1,135 @@
+.desktop-only {
+  display: none;
+}
+
+.program {
+  border: var(--border-primary);
+  background-color: var(--color-secondary);
+  width: 100%;
+  align-self: center;
+
+  // Hoofdimage van de program
+  > img {
+    border-bottom: var(--border-primary);
+    width: inherit;
+    height: auto;
+  }
+
+  // Deze section bevat de hoofdcontent van de program
+  > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--padding-gap-primary);
+    padding: 2.5vh 6vw;
+    min-height: 20vh;
+
+    > p,
+    > h2 {
+      text-align: center;
+    }
+  }
+
+  // info-grid bevat de overige data (datum, tijd, etc)
+  #info-grid {
+    align-self: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    // Individuele grid items met de info erin
+    > div {
+      min-width: 25vw;
+      height: 5vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      > img,
+      > h2 {
+        display: inline;
+        text-align: end;
+        align-self: center;
+      }
+    }
+  }
+
+  // Lees meer knopje
+  button {
+    align-self: center;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .program {
+    display: flex;
+    width: 40.5vw;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+
+    > img {
+      border-bottom: none;
+      border-right: var(--border-primary);
+      object-fit: cover;
+      width: 7vw;
+    }
+
+    > section {
+      justify-content: flex-start;
+      padding: 1vw;
+      gap: 1vh;
+
+      > p,
+      > h2 {
+        align-self: start;
+        text-align: start;
+      }
+
+      > p {
+        height: 55%;
+      }
+    }
+
+    #info-grid {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-self: flex-end;
+      width: 100%;
+      gap: 1.2vw;
+
+      > div {
+        gap: 8px;
+        min-width: 3vw;
+      }
+
+      img {
+        width: 1.3vw;
+        height: auto;
+      }
+    }
+
+    button:not(.desktop-only) {
+      display: none;
+    }
+
+    .desktop-only {
+      display: inline-block;
+      width: 7.5vw;
+      align-self: flex-end;
+      position: relative;
+      left: 1vw;
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .program {
+    .desktop-only {
+      left: 0;
+      right: 0.5vw;
+    }
+  }
+}
