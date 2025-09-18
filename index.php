@@ -24,7 +24,6 @@
                             <img src="assets/icons/megaphone.svg" alt="megaphone icon">
                         </header>
                     </section>
-                    <?php include_once('views/evenementen.php'); ?>
                     <div class="test-block">
                         <h1>TEST BLOCK PLEASE REMOVE</h1>
                     </div>
