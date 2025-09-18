@@ -1,3 +1,7 @@
+header {
+	z-index: 100;
+}
+
 .faq-header {
 	display: flex;
 	justify-content: center;
@@ -40,6 +44,7 @@ p {
 
 summary img {
 	transition: transform 0.2s;
+	z-index: -1000;
 }
 
 details[open] summary img {
