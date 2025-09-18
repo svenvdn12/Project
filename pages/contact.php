@@ -1,0 +1,46 @@
+<?php
+    declare(strict_types=1);
+?>
+<!DOCTYPE html>
+<html lang="NL-nl">
+    <head>
+        <meta charset="UTF-8">
+        <title>FAQ</title>
+        <meta name="description" content="Chaos Atelier's FAQ Pagina">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/pages/faq.css">
+        <link rel="stylesheet" href="../css/pages/contact.css">
+        <link rel="stylesheet" href="../css/modules/header.css">
+        <link rel="stylesheet" href="../css/modules/footer.css">
+        <script src="../js/header-dropdown-menu-toggle.js" defer></script>
+    </head>
+    <body>
+        <div id="container">
+            <?php include_once('../views/header.php'); ?>
+            <div id="page-content-container">
+                <main>
+                    <section>
+                        <header class="faq-header">
+                            <h1>FAQ</h1>
+                            <img src="../assets/icons/megaphone.svg" alt="megaphone icon">
+                        </header>
+                    </section>
+                    <section class="contact-content">
+                      <p>Wij staan open voor het beantwoorden van al je vragen, het sparren over je suggesties, en het kennismaken met potentiële samenwerkingspartners.</p>
+                      <p>Laat hieronder een bericht voor ons achter en we nemen zo snel mogelijk contact met je op.</p>
+                    </section>
+                    <form action="#" method="post" class="contact-form">
+                      <div class="form-row">
+                        <input type="text" name="name" id="name" placeholder="Naam...">
+                        <input type="text" name="email" id="email" placeholder="Email...">
+                      </div>
+                      <textarea name="message" id="message" placeholder="Bericht..." rows="4"></textarea>
+                      <input type="submit" name="submit" value="VERSTUUR">
+                    </form>
+                </main>
+                <?php include_once('../views/footer.php'); ?>
+            </div>
+        </div>
+    </body>
+</html>

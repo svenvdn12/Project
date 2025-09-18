@@ -1,6 +1,2 @@
-#pretierrc
+#prettier
 .prettierrc
-#vs code
-VsCode/
-#sass
-sass
