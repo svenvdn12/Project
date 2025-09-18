@@ -231,9 +231,9 @@ h2 {
 	font-size: var(--font-size-l);
 }
 
-p {
+/* p {
 	width: fit-content;
-}
+} */
 
 section > header {
 	display: flex;

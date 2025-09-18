@@ -1,10 +1,10 @@
-<link rel="stylesheet" href="css/modules/evenementen.css">
-<link rel="stylesheet" href="css/modules/program.css">
+<link rel="stylesheet" href="../css/modules/evenementen.css">
+<link rel="stylesheet" href="../css/modules/program.css">
 <div id="evenementen-container">
     <section>
         <header>
             <h1>ACTIVITEITEN</h1>
-            <img src="assets/icons/megaphone.svg" alt="megaphone icon">
+            <img src="../assets/icons/megaphone.svg" alt="megaphone icon">
         </header>
     </section>
     <section>
@@ -17,13 +17,13 @@
             // Dit is gewoon om de program view te testen en de pagina wat body te geven, haal weg voordat dit live gaat
             for ($i = 0; $i < 4; $i++)
             {
-                include('views/program.php');
+                include('../views/program.php');
             }
         ?>
     </section>
     <section>
-        <a href="#"><img src="assets/icons/arrow-left.svg" alt="back"></a>
+        <a href="#"><img src="../assets/icons/arrow-left.svg" alt="back"></a>
         <span>Volgende Pagina</span>
-        <a href="#"><img src="assets/icons/arrow-right.svg" alt="next"></a>
+        <a href="#"><img src="../assets/icons/arrow-right.svg" alt="next"></a>
     </section>
 </div>
