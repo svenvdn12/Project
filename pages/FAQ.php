@@ -2,7 +2,7 @@
     declare(strict_types=1);
 ?>
 <!DOCTYPE html>
-<html lang="">
+<html lang="NL-nl">
     <head>
         <meta charset="UTF-8">
         <title>FAQ</title>
