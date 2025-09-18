@@ -1,4 +1,6 @@
 #pretierrc
-.pretierrc
+.prettierrc
 #vs code
 VsCode/
+#sass
+sass
