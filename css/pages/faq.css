@@ -11,6 +11,10 @@
 	gap: 1.5em;
 }
 
+main {
+	min-width: 100%;
+}
+
 h2 {
 	display: inline-block;
 	margin-right: 0.5em;
