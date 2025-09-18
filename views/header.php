@@ -17,7 +17,7 @@
     </section>
     <section id="header-dropdown-menu">
         <ul>
-            <li><a href="">Ontmoetingsgroep</a></li>
+            <li><a href="../pages/info.php">Ontmoetingsgroep</a></li>
             <li><a href="#">Evenementen</a></li>
             <li><a href="../pages/over-ons.php">Over ons</a></li>
             <li><a href="#">Contact</a></li>
