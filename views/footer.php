@@ -25,7 +25,8 @@
             <p>Wil je op de hoogte blijven van de activiteiten en evenementen van het Chaos Atelier?</p>
             <p>Schrijf je in voor onze maandelijkse nieuwsbrief!</p>
             <form action="#">
-                <input type="email" name="newsletter-email-input" id="newsletter-email-input" placeholder="E-mailadres..." required>
+                <input type="email" name="newsletter-email-input" id="newsletter-email-input"
+                    placeholder="E-mailadres..." required>
                 <input type="submit" value="JOIN" class="btn">
             </form>
         </section>
