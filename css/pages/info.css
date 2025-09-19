@@ -1,0 +1,41 @@
+main {
+    text-align: center;
+    font-size: var(--font-size-l);
+}
+main > section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#info-image {
+    margin: 0 auto;
+}
+#meeting-form, #form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+input, textarea {
+    padding: 1em;
+    width: 100%;
+}
+#info-submit {
+    width: 80%;
+}
+input, textarea, textarea::placeholder {
+    color: var(--color-accent);
+}
+
+@media screen and (min-width: 1000px) {
+    main {
+        text-align: start;
+    }
+    #info-image {
+        margin: 0 0;
+    }
+    #form-section {
+        flex-direction: row;
+    }
+}

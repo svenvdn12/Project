@@ -1,0 +1,45 @@
+.faq-header {
+	display: flex;
+	justify-content: center;
+	gap: 3em;
+}
+
+.faq-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5em;
+}
+
+main {
+	min-width: 100%;
+}
+
+h2 {
+	display: inline-block;
+	margin-right: 0.5em;
+	/* font-size: var(--font-size-xl); */
+	font-size: 1.3em;
+}
+
+p {
+	text-align: center;
+}
+
+p {
+	margin-bottom: 0.7em;
+}
+
+@media screen and (min-width: 1000px) {
+	.faq-header {
+		justify-content: space-between;
+	}
+
+	.faq-content {
+		align-items: normal;
+	}
+
+	p {
+		text-align: left;
+	}
+}

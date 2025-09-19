@@ -1,4 +1,5 @@
-#pretierrc
-.pretierrc
-#vs code
-VsCode/
+#prettier
+.prettierrc
+
+#sass mappen
+sass/
