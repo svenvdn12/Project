@@ -1,9 +1,10 @@
+<link rel="icon" type="image/svg" href="../assets/icons/brands/site/logo.svg">
 <link rel="stylesheet" href="../css/modules/evenementen.css">
 <link rel="stylesheet" href="../css/modules/program.css">
 <div id="evenementen-container">
     <section>
         <header>
-            <h1>ACTIVITEITEN</h1>
+            <h1>Activiteiten - Chaos Atelier</h1>
             <img src="../assets/icons/megaphone.svg" alt="megaphone icon">
         </header>
     </section>

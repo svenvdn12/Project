@@ -5,8 +5,9 @@
 <html lang="NL-nl">
     <head>
         <meta charset="UTF-8">
-        <title>FAQ</title>
-        <meta name="description" content="Chaos Atelier's FAQ Pagina">
+        <title>Contact - Chaos Atelier</title>
+        <link rel="icon" type="image/svg" href="../assets/icons/brands/site/logo.svg">
+        <meta name="description" content="Heb je nog steeds een vraag? Neem dan contact met ons op via de contactformulier of via de mail.">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/pages/faq.css">
@@ -27,16 +28,16 @@
                         </header>
                     </section>
                     <section class="contact-content">
-                      <p>Wij staan open voor het beantwoorden van al je vragen, het sparren over je suggesties, en het kennismaken met potentiële samenwerkingspartners.</p>
-                      <p>Laat hieronder een bericht voor ons achter en we nemen zo snel mogelijk contact met je op.</p>
+                        <p>Wij staan open voor het beantwoorden van al je vragen, het sparren over je suggesties, en het kennismaken met potentiële samenwerkingspartners.</p>
+                        <p>Laat hieronder een bericht voor ons achter en we nemen zo snel mogelijk contact met je op.</p>
                     </section>
                     <form action="#" method="post" class="contact-form">
-                      <div class="form-row">
-                        <input type="text" name="name" id="name" placeholder="Naam...">
-                        <input type="text" name="email" id="email" placeholder="Email...">
-                      </div>
-                      <textarea name="message" id="message" placeholder="Bericht..." rows="4"></textarea>
-                      <input type="submit" name="submit" value="VERSTUUR">
+                        <div class="form-row">
+                            <input type="text" name="name" id="name" placeholder="Naam...">
+                            <input type="text" name="email" id="email" placeholder="Email...">
+                        </div>
+                        <textarea name="message" id="message" placeholder="Bericht..." rows="4"></textarea>
+                        <input type="submit" name="submit" value="VERSTUUR">
                     </form>
                 </main>
                 <?php include_once('../views/footer.php'); ?>

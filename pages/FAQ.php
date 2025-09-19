@@ -5,8 +5,9 @@
 <html lang="NL-nl">
     <head>
         <meta charset="UTF-8">
-        <title>FAQ</title>
-        <meta name="description" content="Chaos Atelier's FAQ Pagina">
+        <title>FAQ - Chaos Atelier</title>
+        <link rel="icon" type="image/svg" href="../assets/icons/brands/site/logo.svg">
+        <meta name="description" content="Vind hier wat de meest gestelde vragen zijn over de Chaos Atelier.">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/pages/faq.css">
