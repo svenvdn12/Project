@@ -1,2 +1,5 @@
 #prettier
 .prettierrc
+
+#sass mappen
+sass/
