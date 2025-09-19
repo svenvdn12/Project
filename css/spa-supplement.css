@@ -51,7 +51,7 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 
 .stop {
   height: 6vh;
-  scroll-snap-align: end;
+  scroll-snap-align: start;
   background-color: var(--color-accent);
   border-top: 5px solid white;
   display: flex;
@@ -95,6 +95,15 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
   }
   .plx {
     min-height: 84vh;
+    padding-bottom: 5vh;
+    scroll-snap-align: start;
+  }
+  .stop {
+    display: none;
+  }
+  .divider {
+    height: 150vh;
+    border-top: var(--border-primary);
   }
 }
 
