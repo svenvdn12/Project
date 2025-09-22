@@ -52,7 +52,7 @@ h2 {
 	}
 	#lees-meer-content {
 		gap: var(--padding-gap-primary);
-        flex-direction: row;
+		flex-direction: row;
 	}
 	.home-content-section {
 		flex: 1;

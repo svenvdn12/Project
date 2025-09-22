@@ -1,6 +1,6 @@
 <header id="page-header">
     <section class="header-top">
-        <a href="../pages/home.php"><img src="../assets/icons/brands/site/logo.svg" alt="Chaos Atelier logo"></a>
+        <a href="../pages/home.php"><img class="site-logo" src="../assets/icons/brands/site/logo.svg" alt="Chaos Atelier logo"></a>
          <!-- <a href="home.php">
             <object data="./assets/icons/brands/site/logo.svg" type="image/jpg">
                 <img src="../assets/icons/brands/site/logo.svg"/>
