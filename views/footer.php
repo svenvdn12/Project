@@ -1,4 +1,4 @@
-<footer id="page-footer">
+<footer id="page-footer" class="scroll-anchor plx plx-component">
     <section class="footer-content">
         <section class="footer-col">
             <h2>Pagina's</h2>
