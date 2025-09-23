@@ -1,0 +1,41 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#container {
+	max-width: 100%;
+	height: 100%;
+}
+
+.var-grid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 500px;
+	gap: 5px;
+	background-color: var(--color-primary);
+}
+
+.var-grid img {
+	display: flex;
+	flex: 1;
+	/* min-width: 50px;
+	min-height: 50px; */
+	height: 20vh;
+	width: auto;
+	object-fit: cover;
+}
+
+/* .var-grid img:nth-child(odd(2n+2)) {
+	flex: 4;
+}
+
+.var-grid img:nth-child(2n + 2) {
+	flex: 2;
+}
+
+.var-grid img:nth-child(2n + 6) {
+	flex: 3;
+} */
