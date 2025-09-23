@@ -14,6 +14,39 @@
         <link rel="stylesheet" href="../css/modules/header.css">
         <link rel="stylesheet" href="../css/modules/footer.css">
         <script src="../js/header-dropdown-menu-toggle.js" defer></script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "Name": "Chaos Atelier",
+            "description": "Vind hier alle informatie over onze activiteiten van de Chaos Atelier!",
+            "logo": "logo.svg",
+            "url": "chaosatelier.nl",
+            "email": "hetchaosatelier@gmail.com",
+            "address":{
+                "@type": "PostalAddress",
+                "streetAddress": "Flevoweg 11",
+                "postalCode": "2318 BZ",
+                "addressCountry": "NL"
+            },
+            "founder":{
+                "@type": "Person",
+                "name": "Sofia van der Knaap",
+                "email": "s.vanderknaap@rcnheliomare.nl",
+                "address":{
+                "@type": "PostalAddress",
+                "addressCountry": "NL"
+                }
+            }
+        }
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Audience",
+                "audienceType": "Neurodivergente individuelen"
+            }
+        </script>
     </head>
     <body>
         <div id="container">

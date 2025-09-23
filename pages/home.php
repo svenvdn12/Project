@@ -25,8 +25,8 @@
             "email": "hetchaosatelier@gmail.com",
             "address":{
                 "@type": "PostalAddress",
-                "streetAddress": "",
-                "postalCode": "",
+                "streetAddress": "Flevoweg 11",
+                "postalCode": "2318 BZ",
                 "addressCountry": "NL"
             },
             "founder":{
@@ -35,8 +35,6 @@
                 "email": "s.vanderknaap@rcnheliomare.nl",
                 "address":{
                 "@type": "PostalAddress",
-                "streetAddress": "",
-                "postalCode": "",
                 "addressCountry": "NL"
                 }
             }
