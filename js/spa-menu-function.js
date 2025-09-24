@@ -9,7 +9,6 @@ button.addEventListener('click', function () {
 		document.querySelector('.welkom').scrollIntoView({ behavior: 'smooth' });
 		isOpen = false;
 	} else {
-		currentScroll = window.scrollY;
 		document.querySelector('.menu').scrollIntoView({ behavior: 'smooth' });
 		isOpen = true;
 	}
