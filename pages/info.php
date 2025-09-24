@@ -1,6 +1,50 @@
 <?php
+    declare(strict_types=1);
 
-declare(strict_types=1);
+    $name = $email = $reason = $source = $age = $message = $note = '';
+    $nameError = $emailError = $ageError = $reasonError = $sourceError = '';
+
+    if(isset($_POST['info-submit'])){
+        $errors = [];
+        if(!empty($_POST['name-signup-input'])){
+            $name = $_POST['name-signup-input'];
+        }
+        else{
+            $nameError = 'Naam is verplicht.';
+        }
+        if(!empty($_POST['email-signup-input'])){
+            $email = $_POST['email-signup-input'];
+            
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                $emailError = 'Dit is een ongeldige email.';
+            }
+        }
+        else{
+            $emailError = 'Email is verplicht.';
+        }
+        if(!empty($_POST['age-signup-input'])){
+            // echo gettype($_POST['age-signup-input']); 
+            $ageInput = intval($_POST['age-signup-input']);
+            if($ageInput <= 0){
+                $ageError = 'Voer een geldig nummer in.';
+            }
+        }
+        if(!empty($_POST['reason-signup-input'])){
+            $reason = $_POST['reason-signup-input'];
+        }
+        else{
+            $reasonError = 'Geen reden ingevuld.';
+        }
+        if(!empty($_POST['source-signup-input'])){
+            $source = $_POST['source-signup-input'];
+        }
+        else{
+            $sourceError = 'Geen bron ingevuld.';
+        }
+        if(isset($_POST['note-signup-input'])){
+            $note = $_POST['note-signup-input'];
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="">
@@ -35,16 +79,37 @@ declare(strict_types=1);
                     <img src="../assets/images/placeholder.jpg" alt="placeholder" width="300" id="info-image">
                     <p>Onderdeel van de aanmelding is een kennismakingsgesprek met de host. Zo weten jullie beiden met wie je te maken hebt en bespreken jullie al jouw verwachtingen en wensen rondom de ontmoetingsgroep.</p>
                     <p>Schrijf je hieronder in! Er wordt contact met je opgenomen voor het maken van een afspraak.</p>
-                    <form action="" id="meeting-form">
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" id="meeting-form" method="post">
                         <section id="form-section">
-                            <input type="text" name="name-signup-input" id="name-signup-input" placeholder="Naam..." />
-                            <input type="email" name="email-signup-input" id="email-signup-input" placeholder="E-mailadres..." />
-                            <input type="number" name="age-signup-input" id="age-signup-input" placeholder="20" />
+                            <div class="form-row2">
+                                <input type="text" name="name-signup-input" id="name-signup-input" placeholder="Naam..." value="<?= $name ? $name : ''?>" required/>
+                                <?php if (!empty($nameError)){ ?>
+                                    <p class="error"><?php echo $nameError; ?></p>
+                                <?php } ?>
+                            </div>
+                            <div class="form-row2">
+                                <input type="email" name="email-signup-input" id="email-signup-input" placeholder="E-mailadres..." value="<?= $email ? $email : ''?>" required />
+                                <?php if (!empty($emailError)){ ?>
+                                    <p class="error"><?php echo $emailError; ?></p>
+                                <?php } ?>
+                            </div>
+                            <div class="form-row2">
+                                <input type="number" name="age-signup-input" id="age-signup-input" placeholder="20" value="<?= $ageInput ? $ageInput : ''?>" required/>
+                                <?php if (!empty($ageError)){ ?>
+                                    <p class="error"><?php echo $ageError; ?></p>
+                                <?php } ?>
+                            </div>
                         </section>
-                        <textarea placeholder="Rede van aanmelding..." id="reason-signup-input" name="reason-signup-input"></textarea>
-                        <textarea placeholder="Hoe ben je bij het chaos atelier gekomen..." id="source-signup-input" name="source-signup-input"></textarea>
-                        <textarea placeholder="Opmerkingen..." id="note-signup-input" name="note-signup-input"></textarea>
-                        <button type="submit" id="info-submit">VERSTUUR</button>
+                        <textarea placeholder="Rede van aanmelding..." id="reason-signup-input" name="reason-signup-input" required><?= $reason ? $reason : ''?></textarea>
+                        <?php if (!empty($reasonError)){ ?>
+                                <p class="error"><?php echo $reasonError; ?></p>
+                            <?php } ?>
+                        <textarea placeholder="Hoe ben je bij het chaos atelier gekomen..." id="source-signup-input" name="source-signup-input" required><?= $source ? $source : ''?></textarea>
+                        <?php if (!empty($sourceError)){ ?>
+                                <p class="error"><?php echo $sourceError; ?></p>
+                        <?php } ?>
+                        <textarea placeholder="Opmerkingen..." id="note-signup-input" name="note-signup-input"><?= $note ? $note : ''?></textarea>
+                        <button type="submit" id="info-submit" name="info-submit">VERSTUUR</button>
                     </form>
                 </section>
             </main>
