@@ -1,3 +1,15 @@
+<?php
+	$allowedUrls = 
+	[
+		'contact',
+		'evenementen',
+		'FAQ',
+		'home',
+		'info',
+		'over-ons',
+		'galerij'
+	];
+?>
 <!DOCTYPE html>
 <html lang="nl-NL">
 	<head>
@@ -14,9 +26,9 @@
 	</head>
 	<body>
     <?php include_once 'views/header.php';?>
-		<main id="main" class="scroll-anchor">
+		<main id="main" class="scroll-anchor"> <!-- Het overkoepelende element dat alle pagina's bevat MOET een scroll-anchor zijn met de id 'main' -->
 			<?php include_once 'views/menu.php';?>
-			<div class="scroll-anchor plx plx-component">
+			<div class="scroll-anchor plx plx-component"> <!-- De content container van elke pagina moet deze classes hebben -->
 				<section class="welkom">
 					<header>
 						<h1>SPA-TPLX</h1>
@@ -39,9 +51,9 @@
 					This is a test chamber. Four walls, ceiling and a floor. Good enough for science.
 				</p>
 			</div>
-			<aside class="scroll-anchor stop"><h2>Galerij</h2></aside>
-			<aside class="divider"></aside>
-			<div id="galerij" class="scroll-anchor plx plx-component">
+			<aside class="scroll-anchor stop"><h2>Over ons</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
+			<aside class="divider"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
+			<div id="over-ons" class="scroll-anchor plx plx-component">
 				<h1>Galerij</h1>
 				<h2>You know, I've been thinking...</h2>
 				<p>When life gives you lemons, don't make lemonade.</p>
@@ -52,16 +64,6 @@
 				<p>Do you know who I am!?</p>
 			</div>
 			<aside class="scroll-anchor stop"><h2>Evenementen</h2></aside>
-			<aside class="divider"></aside>
-			<div class="evenementen scroll-anchor plx plx-component">
-				<h1>Evenementen</h1>
-				<h2>
-					The fitnessgram pacer test is a multi-stage aerobic capacity test which progressively gets more
-					difficult as it continues.
-				</h2>
-				<p>The 30 second pacer test will begin in 1 minute.</p>
-			</div>
-			<aside class="scroll-anchor stop"></aside>
 			<aside class="divider"></aside>
 			<?php include_once 'views/footer.php';?>
 		</main>

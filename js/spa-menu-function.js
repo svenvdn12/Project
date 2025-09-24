@@ -3,7 +3,6 @@ document.querySelector('.welkom').scrollIntoView(false);
 
 const button = document.querySelector('#hamburger-toggle');
 let isOpen = false;
-let currentScroll = 0;
 
 button.addEventListener('click', function () {
 	if (isOpen) {

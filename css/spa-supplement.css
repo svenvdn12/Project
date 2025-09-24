@@ -1,99 +1,99 @@
 :root {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 /* Deze class verzorgt de functionaliteit van het parallax systeem zelf
 Tussen elke plx pagina moet een scroll anchor element staan; in mijn voorbeeld gebruik ik een lege <aside class="scroll-anchor divider"> */
 .scroll-anchor {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 80vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  scrollbar-width: none;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 80vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+	scrollbar-width: none;
 }
 
 /* De plx class geeft stijlregels mee die nodig zijn om het parallax systeem soepel te laten werken met het bestaande ontwerp
 Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 .plx {
-  height: auto;
-  min-height: 74vh;
-  display: flex;
-  flex-direction: column;
-  gap: var(--padding-gap-primary);
-  padding: var(--padding-gap-primary);
+	height: auto;
+	min-height: 74vh;
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-gap-primary);
+	padding: var(--padding-gap-primary);
 }
 
 .divider {
-  background-color: var(--color-accent);
-  border-bottom: var(--border-primary);
-  height: 200vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+	background-color: var(--color-accent);
+	border-bottom: var(--border-primary);
+	height: 200vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .spa-icon {
-  width: 6vw;
-  height: auto;
-  align-self: center;
-  position: relative;
+	width: 6vw;
+	height: auto;
+	align-self: center;
+	position: relative;
 }
 
 .stop {
-  height: 6vh;
-  scroll-snap-align: end;
-  background-color: var(--color-accent);
-  border-top: 5px solid white;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  overflow-x: scroll;
-  scroll-snap-type: y mandatory;
+	height: 6vh;
+	scroll-snap-align: end;
+	background-color: var(--color-accent);
+	border-top: 5px solid white;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	overflow-x: scroll;
+	scroll-snap-type: y mandatory;
 }
 
 .stop h2 {
-  color: white;
-  scroll-snap-align: center;
-  padding-right: 50vw;
-  padding-left: 50vw;
-  align-self: center;
+	color: white;
+	scroll-snap-align: center;
+	/*padding-right: 50vw;
+  padding-left: 50vw;*/
+	align-self: center;
 }
 
 /* Dit is momenteel even experimenteel - simpel gezged krijgt elke opeenvolgende pagina een iets donkerede background-color via een sass functie */
 .plx-component:nth-of-type(2) {
-  background-color: hsl(234, 68%, 42%);
+	background-color: hsl(234, 68%, 42%);
 }
 
 .plx-component:nth-of-type(3) {
-  background-color: hsl(234, 68%, 34.5%);
+	background-color: hsl(234, 68%, 34.5%);
 }
 
 .plx-component:nth-of-type(4) {
-  background-color: hsl(234, 68%, 27%);
+	background-color: hsl(234, 68%, 27%);
 }
 
 @media screen and (min-width: 1000px) {
-  .scroll-anchor {
-    height: 85vh;
-  }
-  .plx {
-    min-height: 84vh;
-    padding-bottom: 5vh;
-    scroll-snap-align: start;
-  }
-  .stop {
-    display: none;
-  }
-  .divider {
-    height: 150vh;
-    border-top: var(--border-primary);
-  }
+	.scroll-anchor {
+		height: 85vh;
+	}
+	.plx {
+		min-height: 84vh;
+		padding-bottom: 5vh;
+		scroll-snap-align: start;
+	}
+	.stop {
+		display: none;
+	}
+	.divider {
+		height: 150vh;
+		border-top: var(--border-primary);
+	}
 }
 
 /*# sourceMappingURL=spa-supplement.css.map */
