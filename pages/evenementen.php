@@ -2,17 +2,51 @@
     declare(strict_types=1);
 ?>
 <!DOCTYPE html>
-<html lang="">
+<html lang="nl-NL">
     <head>
         <meta charset="UTF-8">
-        <title>Chaos Atelier</title>
-        <meta name="description" content="Chaos Atelier Home">
+        <title>Evenementen - Chaos Atelier</title>
+        <link rel="icon" type="image/svg" href="../assets/icons/brands/site/logo.svg">
+        <meta name="description" content="Vind hier alle evenementen die wij organiseren! Wij organiseren niet alleen ontmoetingsgroepen, maar ook workshops en uitstapjes.">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/modules/header.css">
         <link rel="stylesheet" href="../css/modules/footer.css">
         <link rel="stylesheet" href="../css/pages/evenementen.css">
         <script src="../js/header-dropdown-menu-toggle.js" defer></script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "Name": "Chaos Atelier",
+            "description": "Vind hier alle evenementen die wij organiseren! Wij organiseren niet alleen ontmoetingsgroepen, maar ook workshops en uitstapjes.",
+            "logo": "logo.svg",
+            "url": "chaosatelier.nl",
+            "email": "hetchaosatelier@gmail.com",
+            "address":{
+                "@type": "PostalAddress",
+                "streetAddress": "Flevoweg 11",
+                "postalCode": "2318 BZ",
+                "addressCountry": "NL"
+            },
+            "founder":{
+                "@type": "Person",
+                "name": "Sofia van der Knaap",
+                "email": "s.vanderknaap@rcnheliomare.nl",
+                "address":{
+                "@type": "PostalAddress",
+                "addressCountry": "NL"
+                }
+            }
+        }
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Audience",
+                "audienceType": "Neurodivergente individuelen"
+            }
+        </script>
     </head>
     <body>
         <div id="container">

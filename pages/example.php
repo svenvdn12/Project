@@ -2,11 +2,12 @@
 declare(strict_types=1);
 ?>
 <!DOCTYPE html>
-<html lang="">
+<html lang="nl-NL">
 
 <head>
   <meta charset="UTF-8">
-  <title>Over ons - Chaos Atelier</title>
+  <title - Chaos Atelier</title>
+  <link rel="icon" type="image/svg" href="../assets/icons/brands/site/logo.svg">
   <meta name="description" content="Chaos Atelier Home">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="../css/main.css">

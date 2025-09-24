@@ -31,11 +31,12 @@
     }
 ?>
 <!DOCTYPE html>
-<html lang="NL-nl">
+<html lang="nl-NL">
     <head>
         <meta charset="UTF-8">
-        <title>FAQ</title>
-        <meta name="description" content="Chaos Atelier's FAQ Pagina">
+        <title>Contact - Chaos Atelier</title>
+        <link rel="icon" type="image/svg" href="../assets/icons/brands/site/logo.svg">
+        <meta name="description" content="Heb je nog steeds een vraag? Neem dan contact met ons op via de contactformulier of via de mail.">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/pages/faq.css">
@@ -43,6 +44,39 @@
         <link rel="stylesheet" href="../css/modules/header.css">
         <link rel="stylesheet" href="../css/modules/footer.css">
         <script src="../js/header-dropdown-menu-toggle.js" defer></script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "Name": "Chaos Atelier",
+            "description": "Heb je nog steeds een vraag? Neem dan contact met ons op via de contactformulier of via de mail.",
+            "logo": "logo.svg",
+            "url": "chaosatelier.nl",
+            "email": "hetchaosatelier@gmail.com",
+            "address":{
+                "@type": "PostalAddress",
+                "streetAddress": "Flevoweg 11",
+                "postalCode": "2318 BZ",
+                "addressCountry": "NL"
+            },
+            "founder":{
+                "@type": "Person",
+                "name": "Sofia van der Knaap",
+                "email": "s.vanderknaap@rcnheliomare.nl",
+                "address":{
+                "@type": "PostalAddress",
+                "addressCountry": "NL"
+                }
+            }
+        }
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Audience",
+                "audienceType": "Neurodivergente individuelen"
+            }
+        </script>
     </head>
     <body>
         <div id="container">
