@@ -1,5 +1,5 @@
 'use strict';
-document.querySelector('.welkom').scrollIntoView(false);
+document.querySelector('#start-point').scrollIntoView();
 
 const button = document.querySelector('#hamburger-toggle');
 let isOpen = false;

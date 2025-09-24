@@ -1,60 +1,60 @@
 #main > .menu {
-  background-color: var(--color-secondary);
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	background-color: var(--color-secondary);
+	height: 83vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 #main > .menu ul {
-  align-self: center;
-  width: 100%;
-  height: auto;
-  gap: 0;
-  text-align: center;
+	align-self: center;
+	width: 100%;
+	height: auto;
+	gap: 0;
+	text-align: center;
 }
 
 #main > .menu li {
-  height: 11vh;
-  width: inherit;
-  align-self: center;
-  font-size: 1.2em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+	height: 11vh;
+	width: inherit;
+	align-self: center;
+	font-size: 1.2em;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 #main > .menu li a {
-  align-self: center;
+	align-self: center;
 }
 
 #main > .menu aside {
-  height: 20%;
-  background-color: var(--color-primary);
+	height: 20%;
+	background-color: var(--color-primary);
 }
 
 #main > .menu li:nth-of-type(1) {
-  background-color: hsl(240, 100%, 22.5714285714%);
+	background-color: hsl(240, 100%, 22.5714285714%);
 }
 
 #main > .menu li:nth-of-type(2) {
-  background-color: hsl(240, 100%, 26.1428571429%);
+	background-color: hsl(240, 100%, 26.1428571429%);
 }
 
 #main > .menu li:nth-of-type(3) {
-  background-color: hsl(240, 100%, 29.7142857143%);
+	background-color: hsl(240, 100%, 29.7142857143%);
 }
 
 #main > .menu li:nth-of-type(4) {
-  background-color: hsl(240, 100%, 33.2857142857%);
+	background-color: hsl(240, 100%, 33.2857142857%);
 }
 
 #main > .menu li:nth-of-type(5) {
-  background-color: hsl(240, 100%, 36.8571428571%);
+	background-color: hsl(240, 100%, 36.8571428571%);
 }
 
 #main > .menu li:last-of-type {
-  background-color: var(--color-primary);
+	background-color: var(--color-primary);
 }
 
 /*# sourceMappingURL=menu.css.map */

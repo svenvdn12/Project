@@ -28,6 +28,7 @@
     <?php include_once 'views/header.php';?>
 		<main id="main" class="scroll-anchor"> <!-- Het overkoepelende element dat alle pagina's bevat MOET een scroll-anchor zijn met de id 'main' -->
 			<?php include_once 'views/menu.php';?>
+			<aside id="start-point"></aside>
 			<div class="scroll-anchor plx plx-component"> <!-- De content container van elke pagina moet deze classes hebben -->
 				<section class="welkom">
 					<header>
