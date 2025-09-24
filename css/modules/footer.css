@@ -7,7 +7,7 @@
 	justify-content: center;
 }
 
-#page-footer *:not(input, :hover) {
+#page-footer *:not(input) {
 	color: var(--text-color-contrast);
 }
 
