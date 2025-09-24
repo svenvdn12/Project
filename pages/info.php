@@ -3,7 +3,7 @@
 declare(strict_types=1);
 ?>
 <!DOCTYPE html>
-<html lang="NL-nl">
+<html lang="nl-NL">
 
 <head>
     <meta charset="UTF-8">

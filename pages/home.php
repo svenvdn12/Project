@@ -2,7 +2,7 @@
     declare(strict_types=1);
 ?>
 <!DOCTYPE html>
-<html lang="NL-nl">
+<html lang="nl-NL">
     <head>
         <meta charset="UTF-8">
         <title>Home - Chaos Atelier</title>
@@ -75,12 +75,12 @@
                         <section class="home-content-section">
                             <h2>Ontmoetingsgroep</h2>
                             <p>In een vaste setting met 5-10 gelijkgestemden komen we 10 keer samen. Iedere bijeenkomst staat er een thema centraal. We gaan in wisselende werkvormen het gesprek aan.</p>
-                            <a href="#" class="btn">LEES MEER</a>
+                            <a href="../pages/info.php" class="btn">LEES MEER</a>
                         </section>
                         <section class="home-content-section">
                             <h2>Activiteiten</h2>
                             <p>Verdiepende activiteiten, voor iedereen die een thema uit de ontmoetingsgroep verder wil onderzoeken. Én workshops en uitstapjes voor jongeren die opzoek zijn naar gezellig contact met gelijksgestemden.</p>
-                            <a href="#" class="btn">LEES MEER</a>
+                            <a href="../pages/evenementen.php" class="btn">LEES MEER</a>
                         </section>
                     </div>
                 </main>
