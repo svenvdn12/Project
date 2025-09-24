@@ -90,8 +90,7 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 		display: none;
 	}
 	.divider {
-		height: 150vh;
-		border-top: var(--border-primary);
+		display: none;
 	}
 }
 

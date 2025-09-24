@@ -106,7 +106,9 @@
 	overflow: hidden;
 	max-height: 100vh;
 }*/
-
+#header-dropdown-menu {
+    display: none;
+}
 @media screen and (min-width: 1000px) {
 	#page-header {
 		border-right: var(--border-primary);
@@ -124,6 +126,8 @@
 	}
 
 	#header-dropdown-menu {
+        display: block;
+        padding: var(--padding-gap-primary);
 		max-height: 100%;
 		text-align: start;
 	}
