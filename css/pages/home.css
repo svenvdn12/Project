@@ -11,9 +11,9 @@
 	width: 100%;
 	height: auto;
 	border-top: var(--border-primary);
+    border-bottom: var(--border-primary);
 }
 #main-text {
-	border-top: var(--border-primary);
 	text-align: center;
 	padding: var(--padding-gap-primary);
 }
@@ -52,7 +52,7 @@ h2 {
 	}
 	#lees-meer-content {
 		gap: var(--padding-gap-primary);
-        flex-direction: row;
+		flex-direction: row;
 	}
 	.home-content-section {
 		flex: 1;
