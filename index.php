@@ -7,23 +7,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/modules/header.css" />
 		<link rel="stylesheet" href="css/modules/footer.css" />
+		<link rel="stylesheet" href="css/modules/menu.css" />
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" href="css/spa-supplement.css" />
 		<script src="js/spa-menu-function.js" defer></script>
 	</head>
 	<body>
     <?php include_once 'views/header.php';?>
-		<main class="scroll-anchor">
-			<div class="menu scroll-anchor">
-				<ul>
-					<li><a href="#welkom">Welkom</a></li>
-					<li><a href="#galerij">Galerij</a></li>
-					<li><a href="#events">Evenementen</a></li>
-					<li><a href="#events">Nieuws</a></li>
-					<li><a href="#events">Contact</a></li>
-				</ul>
-			</div>
-			<aside class="divider"></aside>
+		<main id="main" class="scroll-anchor">
+			<?php include_once 'views/menu.php';?>
 			<div class="scroll-anchor plx plx-component">
 				<section class="welkom">
 					<header>

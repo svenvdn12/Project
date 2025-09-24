@@ -1,8 +1,3 @@
-body > header {
-  position: static;
-  top: 0px;
-}
-
 :root {
   scroll-behavior: smooth;
 }
@@ -18,7 +13,7 @@ Tussen elke plx pagina moet een scroll anchor element staan; in mijn voorbeeld g
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-snap-align: start;
-  scroll-snap-stop: normal;
+  scroll-snap-stop: always;
   scrollbar-width: none;
 }
 
@@ -51,7 +46,7 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 
 .stop {
   height: 6vh;
-  scroll-snap-align: start;
+  scroll-snap-align: end;
   background-color: var(--color-accent);
   border-top: 5px solid white;
   display: flex;
@@ -59,7 +54,7 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
   justify-content: center;
   text-align: center;
   overflow-x: scroll;
-  scroll-snap-type: mandatory;
+  scroll-snap-type: y mandatory;
 }
 
 .stop h2 {
@@ -68,12 +63,6 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
   padding-right: 50vw;
   padding-left: 50vw;
   align-self: center;
-}
-
-.menu {
-  background-color: var(--color-secondary);
-  padding: var(--padding-gap-primary);
-  height: 25vh;
 }
 
 /* Dit is momenteel even experimenteel - simpel gezged krijgt elke opeenvolgende pagina een iets donkerede background-color via een sass functie */

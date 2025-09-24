@@ -1,4 +1,4 @@
-const dropdownToggle = document.getElementById("hamburger-toggle");
+/*const dropdownToggle = document.getElementById("hamburger-toggle");
 const dropdownMenu = document.getElementById("header-dropdown-menu");
 
 dropdownToggle.addEventListener("change", (event) => {
@@ -8,3 +8,4 @@ dropdownToggle.addEventListener("change", (event) => {
     dropdownMenu.classList.remove("shown");
   }
 });
+*/
