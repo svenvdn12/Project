@@ -9,6 +9,14 @@ main > section {
 	text-align: center;
 }
 
+.border-content {
+	border: var(--border-primary);
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
 @media screen and (min-width: 1000px) {
 	main > section {
 		align-items: start;

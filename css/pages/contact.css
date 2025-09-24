@@ -1,6 +1,13 @@
+.border-content {
+	border: var(--border-primary);
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	gap: 4em;
+}
+
 .contact-content p:first-child {
 	margin-bottom: 2em;
-	font-size: var(--font-size-l);
 }
 
 .contact-form {

@@ -22,22 +22,24 @@
                 <main>
                     <section>
                         <header class="faq-header">
-                            <h1>FAQ</h1>
+                            <h1>Contact</h1>
                             <img src="../assets/icons/megaphone.svg" alt="megaphone icon">
                         </header>
                     </section>
-                    <section class="contact-content">
-                      <p>Wij staan open voor het beantwoorden van al je vragen, het sparren over je suggesties, en het kennismaken met potentiële samenwerkingspartners.</p>
-                      <p>Laat hieronder een bericht voor ons achter en we nemen zo snel mogelijk contact met je op.</p>
-                    </section>
-                    <form action="#" method="post" class="contact-form">
-                      <div class="form-row">
-                        <input type="text" name="name" id="name" placeholder="Naam...">
-                        <input type="text" name="email" id="email" placeholder="Email...">
-                      </div>
-                      <textarea name="message" id="message" placeholder="Bericht..." rows="4"></textarea>
-                      <input type="submit" name="submit" value="VERSTUUR">
-                    </form>
+                    <div class="border-content">
+                        <section class="contact-content">
+                        <p>Wij staan open voor het beantwoorden van al je vragen, het sparren over je suggesties, en het kennismaken met potentiële samenwerkingspartners.</p>
+                        <p>Laat hieronder een bericht voor ons achter en we nemen zo snel mogelijk contact met je op.</p>
+                        </section>
+                        <form action="#" method="post" class="contact-form">
+                        <div class="form-row">
+                            <input type="text" name="name" id="name" placeholder="Naam...">
+                            <input type="text" name="email" id="email" placeholder="Email...">
+                        </div>
+                        <textarea name="message" id="message" placeholder="Bericht..." rows="4"></textarea>
+                        <input type="submit" name="submit" value="VERSTUUR">
+                        </form>
+                    </div>
                 </main>
                 <?php include_once('../views/footer.php'); ?>
             </div>
