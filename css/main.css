@@ -1,12 +1,13 @@
 :root {
 	/* colors */
 	--color-primary: #2231b4;
-	--color-secondary: #000060;
+	--color-secondary: whitesmoke;
 	--color-accent: #ff611b;
 	--color-accent-hover: #c34400;
 
 	/* typography */
-	--text-color-primary: #ffffff;
+	--text-color-primary: whitesmoke;
+	--text-color-contrast: #2231b4;
 	--text-color-secondary: #ff611b;
 	--font-size-s: 14px;
 	--font-size-m: 15px;
@@ -19,10 +20,10 @@
 	--padding-btn: 10px 20px;
 
 	/* borders */
-	--border-primary: 5px solid #ffffff;
-	--border-primary-accent: 5px solid #ff611b;
-	--border-secondary: 1px solid #ffffff;
-	--border-secondary-accent: 1px solid #ff611b;
+	--border-primary: 5px solid #ff611b;
+	--border-primary-accent: 5px solid whitesmoke;
+	--border-secondary: 1px solid #ff611b;
+	--border-secondary-accent: 1px solid whitesmoke;
 
 	/* transition(s)? */
 	--transition: 0.2s ease;
@@ -379,14 +380,14 @@ video {
 	position: relative;
 }
 
-.item-grid .item::after {
+.item-grid .item:not(:last-child)::after {
 	content: '';
 	position: absolute;
 	left: var(--padding-gap-primary);
 	right: var(--padding-gap-primary);
 	bottom: -5px;
 	height: 5px;
-	background-color: var(--text-color-primary);
+	background-color: var(--color-accent);
 }
 
 .item-grid .item:last-child::after {
@@ -413,6 +414,7 @@ video {
 		padding: var(--padding-gap-primary);
 		position: relative;
 		flex: 1 1 calc(33.3% - var(--padding-gap-primary));
+		color: var(--text-color-contrast);
 	}
 
 	.item-grid .item::after {
@@ -422,7 +424,7 @@ video {
 		right: 0px;
 		bottom: -5px;
 		height: 5px;
-		background-color: var(--text-color-primary);
+		background-color: var(--color-accent);
 	}
 
 	.item-grid .item::before {
@@ -432,7 +434,7 @@ video {
 		bottom: 0px;
 		right: -5px;
 		width: 5px;
-		background-color: var(--text-color-primary);
+		background-color: var(--color-accent);
 	}
 
 	.item-grid .item:not(:nth-child(3n + 1)) {
