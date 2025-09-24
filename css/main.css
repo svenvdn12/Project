@@ -32,7 +32,9 @@
 	--shadow-right: 5px 0px 10px rgba(0, 0, 0, 0.2);
 	--shadow-bottom: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
-
+#desktop {
+    display: none;
+}
 @font-face {
 	font-family: 'azeret-mono';
 	src: url(./fonts/azeret-mono/AzeretMono-VariableFont_wght.ttf) format('truetype');
