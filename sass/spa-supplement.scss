@@ -4,8 +4,8 @@
 @use 'colors';
 
 $dividerColor: var(--color-accent);
-$numOfPlx: 3; // Aantal pagina's met de plx-component class
-$contrastFactor: 40; // Minder = contrast++ : Meer = contrast--
+$numOfPlx: 6; // Aantal pagina's met de plx-component class
+$contrastFactor: 160; // Minder = contrast++ : Meer = contrast--
 $base: colors.$lightToUse;
 
 :root {
@@ -20,7 +20,7 @@ Tussen elke plx pagina moet een scroll anchor element staan; in mijn voorbeeld g
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	height: 80vh; // Deze elementen moeten een vaste height property hebben voor de parallax, flex:1 veroorzaakt chaos (atelier)
+	height: 83vh; // Deze elementen moeten een vaste height property hebben voor de parallax, flex:1 veroorzaakt chaos (atelier)
 	overflow-y: scroll;
 	scroll-snap-type: y mandatory;
 	scroll-snap-align: start;
@@ -32,7 +32,7 @@ Tussen elke plx pagina moet een scroll anchor element staan; in mijn voorbeeld g
 Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 .plx {
 	height: auto;
-	min-height: 74vh; // Het verschil tussen dit en de height van de scroll-anchor is de padding-top van elke pagina
+	min-height: 75vh; // Het verschil tussen dit en de height van de scroll-anchor is de padding-top van elke pagina
 	display: flex;
 	flex-direction: column;
 	gap: var(--padding-gap-primary);
@@ -67,14 +67,12 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 	justify-content: center;
 	text-align: center;
 	overflow-x: scroll;
-	scroll-snap-type: x mandatory;
+	scroll-snap-type: y mandatory;
 }
 
 .stop h2 {
 	color: white;
 	scroll-snap-align: center;
-	padding-right: 50vw;
-	padding-left: 50vw;
 	align-self: center;
 }
 
@@ -83,7 +81,7 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 	.plx-component:nth-of-type(#{$i + 1}) {
 		background-color: $base;
 	}
-	$base: darken($base, $numOfPlx, $contrastFactor);
+	$base: functions.darker($base, $numOfPlx, $contrastFactor);
 }
 
 @media screen and (min-width: 1000px) {
@@ -92,7 +90,7 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 	}
 
 	.plx {
-		min-height: 84vh;
+		//min-height: 84vh;
 		padding-bottom: 5vh;
 		scroll-snap-align: start;
 	}
@@ -102,7 +100,8 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 	}
 
 	.divider {
-		height: 150vh;
-		border-top: var(--border-primary);
+		//height: 150vh;
+		//border-top: var(--border-primary);
+		display: none;
 	}
 }

@@ -11,7 +11,7 @@
 	--font-size-s: 14px;
 	--font-size-m: 15px;
 	--font-size-l: 16px;
-	--font-size-xl: 32px;
+	--font-size-xl: 30px;
 
 	/* spacing */
 	--padding-gap-primary: 20px;
@@ -53,7 +53,7 @@
 
 html,
 body {
-    /* width: 90vw; */
+	/* width: 90vw; */
 	background-color: var(--color-primary);
 	color: var(--text-color-primary);
 	font-family: 'azeret-mono', monospace;
@@ -101,7 +101,7 @@ main section {
 	display: flex;
 	flex-direction: column;
 	gap: var(--padding-gap-primary);
-    width: 100%;
+	width: 100%;
 }
 
 /* html element styles */
@@ -344,12 +344,13 @@ video {
 }
 
 @media screen and (min-width: 1000px) {
-    #main > .menu, .divider {
-        display: none;
-    }
-    body {
-        flex-direction: row;
-    }
+	#main > .menu,
+	.divider {
+		display: none;
+	}
+	body {
+		flex-direction: row;
+	}
 	#container {
 		flex-direction: row;
 		max-height: 100vh;
@@ -414,29 +415,29 @@ video {
 	margin-top: 5px;
 }
 #main {
-    display: block;
+	display: block;
 }
 #main-2 {
-    display: none;
+	display: none;
 }
 @media screen and (min-width: 1000px) {
-    #main {
-        display: none;
-    }
-    #main-2 {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding-left: 190px;
-    }
-    #page-content {
-        padding: var(--padding-gap-secondary);
-        /* min-height: calc(100% - 305px); */
-        flex: 1;
-    }
-    #main-2 > #page-footer {
-        height: fit-content;
-    }
+	#main {
+		display: none;
+	}
+	#main-2 {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding-left: 190px;
+	}
+	#page-content {
+		padding: var(--padding-gap-secondary);
+		/* min-height: calc(100% - 305px); */
+		flex: 1;
+	}
+	#main-2 > #page-footer {
+		height: fit-content;
+	}
 	.item-grid {
 		flex-direction: row;
 		flex-wrap: wrap;
