@@ -3,16 +3,16 @@
 @use 'functions';
 @use 'colors';
 
-$numOfItems: 5; // Aantal pagina's met de plx-component class
-$contrastFactor: 140; // Minder = contrast++ : Meer = contrast--
+$numOfItems: 6; // Aantal pagina's met de plx-component class
+$contrastFactor: 160; // Minder = contrast++ : Meer = contrast--
 
 $base: colors.$darkToUse;
 
-$base: brighter($base, $numOfItems, $contrastFactor);
+//$base: functions.brighter($base, $numOfItems, $contrastFactor);
 
 #main > .menu {
 	background-color: var(--color-secondary);
-	height: 80vh;
+	height: 83vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -46,7 +46,7 @@ $base: brighter($base, $numOfItems, $contrastFactor);
 	#main > .menu li:nth-of-type(#{$i}) {
 		background-color: $base;
 	}
-	$base: darken($base);
+	$base: functions.brighter($base, $numOfItems, $contrastFactor);
 }
 
 #main > .menu li:last-of-type {
