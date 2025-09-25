@@ -112,7 +112,7 @@
 @media screen and (min-width: 1000px) {
 	#page-header {
 		border-right: var(--border-primary);
-		width: 170px;
+		width: 190px;
 		box-shadow: var(--shadow-right);
 		position: fixed;
         height: 100%;
