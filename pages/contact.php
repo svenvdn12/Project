@@ -1,7 +1,7 @@
 <section id="contact-section-header">
     <header class="faq-header">
-        <h1>FAQ</h1>
-        <img src="../assets/icons/megaphone.svg" alt="megaphone icon">
+        <h1>CONTACT</h1>
+        <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
     </header>
 </section>
 <section class="contact-content">
