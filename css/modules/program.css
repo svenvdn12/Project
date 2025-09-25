@@ -56,7 +56,7 @@
 @media screen and (min-width: 1000px) {
 	.program {
 		display: flex;
-		width: 41.5vw;
+		width: 40vw;
 		flex-flow: row nowrap;
 		justify-content: flex-start;
 	}
