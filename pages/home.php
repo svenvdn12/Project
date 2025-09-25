@@ -1,9 +1,9 @@
 <section id="content-main-section" class="welkom">
-    <header id="content-header">
+    <header id="content-header" class="home-header">
         <h1>WELKOM OP HET CHAOS ATELIER</h1>
         <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
     </header>
-    <section>
+    <section class="home-section-1">
         <img src="./assets/images/placeholder.jpg" alt="placeholder" id="home-image" width="400" height="600">
         <section id="main-text">
             <h2>Onze missie</h2>

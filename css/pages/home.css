@@ -1,4 +1,7 @@
-
+.home-header {
+    border: none;
+    border-bottom: var(--border-primary);
+}
 #page-content-container {
 	font-size: var(--font-size-l);
 }
@@ -9,7 +12,7 @@
 #home-image {
 	width: 100%;
 	height: auto;
-	border-top: var(--border-primary);
+	/* border-top: var(--border-primary); */
     border-bottom: var(--border-primary);
 }
 #main-text {
@@ -45,6 +48,12 @@ h2 {
 		display: flex;
 		flex-direction: row;
 	}
+    #home-image {
+        border-bottom: none;
+    }
+    .home-section-1 {
+        gap: 0;
+    }
 	#main-text {
 		text-align: start;
 		border-left: var(--border-primary);
