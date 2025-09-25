@@ -1,5 +1,5 @@
 <section class="content-main-section">
-    <header id="content-header">
+    <header id="content-header" class="events-header">
         <h1>EVENEMENTEN</h1>
         <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
     </header>
