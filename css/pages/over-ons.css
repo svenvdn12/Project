@@ -1,3 +1,8 @@
+.hidden {
+	display: none;
+	max-width: 70vw;
+}
+
 main {
 	gap: var(--padding-gap-primary);
 }
@@ -14,6 +19,10 @@ main > section {
 		align-items: start;
 		text-align: start;
 	}
+
+	.hidden {
+		max-width: 35vw;
+	}
 }
 
 .item-grid .item img {
@@ -21,4 +30,8 @@ main > section {
 	max-width: 100%;
 	height: auto;
 	border: var(--border-primary);
+}
+
+.item-grid .item {
+	transition: height 500ms;
 }
