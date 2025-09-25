@@ -12,7 +12,10 @@
         over jezelf zijn/blijven/worden, over je even helemaal kut voelen, over je favoriete hyperfocus
         en nog zoveel meer.
     </p>
-    <video src=""></video>
+    <video controls>
+        <source src="assets/videos/" type="video/"/>
+        <p>video niet geladen of niet ondersteund door browser</p>
+    </video>
     <h2>Ontmoet, ontdek en deel.</h2>
     <p>We organiseren verschillende vormen van ontmoeting. Zoals:</p>
     <details>
