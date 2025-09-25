@@ -1,11 +1,11 @@
-<div class="menu scroll-anchor"> <!--Hier moet een aparte versie voor komen voor het SPA ontwerp, aangezien je dan met ID's moet navigeren ipv links-->
+<div class="menu scroll-anchor">
     <ul>
-        <li><a href="./pages/info.php">Ontmoetingsgroep</a></li>
-        <li><a href="./pages/evenementen.php">Evenementen</a></li>
-        <li><a href="./pages/over-ons.php">Over ons</a></li>
-        <li><a href="./pages/contact.php">Contact</a></li>
-        <li><a href="./pages/nieuws.php">Nieuws</a></li>
-        <li><a href="./pages/FAQ.php">FAQ</a></li>
+        <li><a href="#info">Ontmoetingsgroep</a></li>
+        <li><a href="#evenementen">Evenementen</a></li>
+        <li><a href="#over-ons">Over ons</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#nieuws">Nieuws</a></li>
+        <li><a href="#FAQ">FAQ</a></li>
         <!-- might be wrong ^ -->
     </ul>
     <aside></aside>
