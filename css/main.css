@@ -360,10 +360,10 @@ video {
 		padding-top: 0px;
 	}
 
-	main {
-		/* padding: var(--padding-gap-secondary); */
+	/* main {
+		padding: var(--padding-gap-secondary);
 		gap: var(--padding-gap-secondary);
-	}
+	} */
 
 	details {
 		margin: 0;
@@ -423,7 +423,18 @@ video {
         display: none;
     }
     #main-2 {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 165px;
+    }
+    #page-content {
+        padding: 20px;
+        /* min-height: calc(100% - 305px); */
+        flex: 1;
+    }
+    #main-2 > #page-footer {
+        height: fit-content;
     }
 	.item-grid {
 		flex-direction: row;

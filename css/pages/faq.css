@@ -11,15 +11,16 @@
 	gap: 1.5em;
 }
 
-main {
+/* main {
 	min-width: 100%;
-}
+} */
 
 h2 {
 	display: inline-block;
-	margin-right: 0.5em;
+	/* margin-right: 0.5em; */
 	/* font-size: var(--font-size-xl); */
 	font-size: 1.3em;
+    max-width: 75vw;
 }
 
 p {

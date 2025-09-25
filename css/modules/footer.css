@@ -5,7 +5,7 @@
 	box-shadow: var(--shadow-top);
 	display: flex;
 	justify-content: center;
-	min-height: 80vh;
+	/* min-height: 80vh; */
 }
 
 #page-footer .footer-content {
@@ -33,6 +33,7 @@
 	#page-footer .footer-content {
 		flex-direction: row;
 		gap: var(--padding-gap-secondary);
+        height: 200px;
 	}
 
 	.footer-col {
