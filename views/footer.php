@@ -3,11 +3,14 @@
         <section class="footer-col">
             <h2>Pagina's</h2>
             <ul>
-                <li><a href="#">Ontmoetingsgroep</a></li>
-                <li><a href="#">Evenementen</a></li>
-                <li><a href="#">Over ons</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Nieuws</a></li>
+                <li><a href="index.php?page=home">Home</a></li>
+                <li><a href="index.php?page=info">Ontmoetingsgroep</a></li>
+                <li><a href="index.php?page=evenementen">Evenementen</a></li>
+                <li><a href="index.php?page=over-ons">Over ons</a></li>
+                <li><a href="index.php?page=contact">Contact</a></li>
+                <li><a href="index.php?page=FAQ">FAQ</a></li>
+                <li><a href="index.php?page=nieuws">Nieuws</a></li>
+                <!-- might be wrong ^ -->
             </ul>
         </section>
         <section class="footer-col">

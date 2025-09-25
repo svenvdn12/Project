@@ -5,6 +5,7 @@
 	box-shadow: var(--shadow-top);
 	display: flex;
 	justify-content: center;
+    align-items: center;
 	/* min-height: 80vh; */
 }
 
@@ -30,13 +31,16 @@
 		padding: var(--padding-gap-secondary);
 	}
 
-	#page-footer .footer-content {
+	#page-footer > .footer-content {
 		flex-direction: row;
 		gap: var(--padding-gap-secondary);
-        height: 200px;
+        height: 300px;
+        width: 100%;
+        margin: 0;
 	}
-
+    
 	.footer-col {
+        flex: 1;
 		align-items: start;
 		text-align: start;
 		max-width: 33.3%;
