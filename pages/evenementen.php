@@ -1,29 +1,17 @@
-<link rel="stylesheet" href="../css/modules/evenementen.css">
-<link rel="stylesheet" href="../css/modules/program.css">
-<div id="evenementen-container">
-    <section>
-        <header>
-            <h1>ACTIVITEITEN</h1>
-            <img src="../assets/icons/megaphone.svg" alt="megaphone icon">
-        </header>
-    </section>
-    <section>
-        <button class="filter"><h2>UITSTAPJES</h2></button>
-        <button class="filter active"><h2>ONTMOETINGSGROEP</h2></button>
-        <button class="filter"><h2>WORKSHOPS</h2></button>
-    </section>
-    <section>
-        <?php 
-            // Dit is gewoon om de program view te testen en de pagina wat body te geven, haal weg voordat dit live gaat
-            for ($i = 0; $i < 4; $i++)
-            {
-                include('../views/program.php');
-            }
-        ?>
-    </section>
-    <section>
-        <a href="#"><img src="../assets/icons/arrow-left.svg" alt="back"></a>
-        <span>Volgende Pagina</span>
-        <a href="#"><img src="../assets/icons/arrow-right.svg" alt="next"></a>
-    </section>
-</div>
+<section class="content-main-section">
+    <header id="content-header" class="events-header">
+        <h1>EVENEMENTEN</h1>
+        <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
+    </header>
+</section>
+<section id="category-selector">
+    <a href="#" class="btn filter">UITSTAPJES</a>
+    <a href="#" class="btn filter active">ONTMOETINGSGROEP</a>
+    <a href="#" class="btn filter">WORKSHOPS</a>
+</section>
+<section id="events">
+    <?php include 'views/program.php';?>
+    <?php include 'views/program.php';?>
+    <?php include 'views/program.php';?>
+    <?php include 'views/program.php';?>
+</section>

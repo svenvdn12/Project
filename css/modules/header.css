@@ -106,17 +106,22 @@
 	overflow: hidden;
 	max-height: 100vh;
 }*/
-
+#header-dropdown-menu {
+    display: none;
+}
 @media screen and (min-width: 1000px) {
 	#page-header {
 		border-right: var(--border-primary);
-		width: fit-content;
+		width: 170px;
 		box-shadow: var(--shadow-right);
-		position: relative;
+		position: fixed;
+        height: 100%;
+        
 	}
 
 	#page-header .header-top {
 		border: none;
+        box-shadow: none;
 	}
 
 	.hamburger-toggle-wrapper {
@@ -124,6 +129,8 @@
 	}
 
 	#header-dropdown-menu {
+        display: block;
+        padding: var(--padding-gap-primary);
 		max-height: 100%;
 		text-align: start;
 	}

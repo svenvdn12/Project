@@ -32,7 +32,6 @@
 	--shadow-right: 5px 0px 10px rgba(0, 0, 0, 0.2);
 	--shadow-bottom: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
-
 @font-face {
 	font-family: 'azeret-mono';
 	src: url(../assets/fonts/azeret-mono/AzeretMono-VariableFont_wght.ttf) format('truetype');
@@ -47,8 +46,14 @@
 	box-sizing: border-box;
 }
 
+/* debug */
+/* * {
+    outline: 1px solid red;
+} */
+
 html,
 body {
+    /* width: 90vw; */
 	background-color: var(--color-primary);
 	color: var(--text-color-primary);
 	font-family: 'azeret-mono', monospace;
@@ -338,6 +343,12 @@ video {
 }
 
 @media screen and (min-width: 1000px) {
+    #main > .menu, .divider {
+        display: none;
+    }
+    body {
+        flex-direction: row;
+    }
 	#container {
 		flex-direction: row;
 		max-height: 100vh;
@@ -349,10 +360,10 @@ video {
 		padding-top: 0px;
 	}
 
-	main {
+	/* main {
 		padding: var(--padding-gap-secondary);
 		gap: var(--padding-gap-secondary);
-	}
+	} */
 
 	details {
 		margin: 0;
@@ -401,8 +412,30 @@ video {
 .item-grid .item:not(:first-child) {
 	margin-top: 5px;
 }
-
+#main {
+    display: block;
+}
+#main-2 {
+    display: none;
+}
 @media screen and (min-width: 1000px) {
+    #main {
+        display: none;
+    }
+    #main-2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 165px;
+    }
+    #page-content {
+        padding: 20px;
+        /* min-height: calc(100% - 305px); */
+        flex: 1;
+    }
+    #main-2 > #page-footer {
+        height: fit-content;
+    }
 	.item-grid {
 		flex-direction: row;
 		flex-wrap: wrap;

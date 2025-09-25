@@ -83,7 +83,7 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 		height: 85vh;
 	}
 	.plx {
-		min-height: 84vh;
+		/* min-height: 84vh; */
 		padding-bottom: 5vh;
 		scroll-snap-align: start;
 	}
@@ -91,8 +91,7 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 		display: none;
 	}
 	.divider {
-		height: 150vh;
-		border-top: var(--border-primary);
+		display: none;
 	}
 }
 

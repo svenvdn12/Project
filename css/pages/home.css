@@ -1,19 +1,21 @@
+.home-header {
+    border: none;
+    border-bottom: var(--border-primary);
+}
 #page-content-container {
 	font-size: var(--font-size-l);
 }
 #content-main-section {
 	border: var(--border-primary);
-}
-#content-header {
-	border: none;
+    gap: 0;
 }
 #home-image {
 	width: 100%;
 	height: auto;
-	border-top: var(--border-primary);
+	/* border-top: var(--border-primary); */
+    border-bottom: var(--border-primary);
 }
 #main-text {
-	border-top: var(--border-primary);
 	text-align: center;
 	padding: var(--padding-gap-primary);
 }
@@ -46,13 +48,19 @@ h2 {
 		display: flex;
 		flex-direction: row;
 	}
+    #home-image {
+        border-bottom: none;
+    }
+    .home-section-1 {
+        gap: 0;
+    }
 	#main-text {
 		text-align: start;
 		border-left: var(--border-primary);
 	}
 	#lees-meer-content {
 		gap: var(--padding-gap-primary);
-        flex-direction: row;
+		flex-direction: row;
 	}
 	.home-content-section {
 		flex: 1;

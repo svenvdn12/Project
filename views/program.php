@@ -1,5 +1,5 @@
 <div class="program">
-    <img src="../assets/images/test.png" width="357" height="200" alt="">
+    <img src="./assets/images/test.png" width="357" height="200" alt="">
     <section>
         <h2>Program</h2>
         <p>Als je dit leest heb je waarschijnlijk per ongeluk de template program module ingeladen :]</p>

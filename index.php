@@ -1,4 +1,38 @@
 <?php
+    declare(strict_types=1);
+
+    include_once('pages/form-processing/info-processing.php');
+    include_once('pages/form-processing/contact-processing.php');
+
+    if (!isset($_GET['page'])) {   
+        $_GET['page'] = 'home';
+    }
+    switch($_GET['page']) {
+        case 'home':
+            $include = 'home';
+            break;
+        case 'info':
+            $include = 'info';
+            break;
+        case 'evenementen':
+            $include = 'evenementen';
+            break;
+        case 'over-ons':
+            $include = 'over-ons';
+            break;
+        case 'contact':
+            $include = 'contact';
+            break;
+        case 'FAQ':
+            $include = 'FAQ';
+            break;
+        case 'nieuws':
+            $include = 'nieuws';
+            break;
+        default:
+            $include = 'home';
+    }
+
 	$allowedUrls = 
 	[
 		'contact',
@@ -17,56 +51,55 @@
 		<title>Chaos Atelier</title>
 		<meta name="description" content="Chaos Atelier website." />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="css/modules/header.css" />
-		<link rel="stylesheet" href="css/modules/footer.css" />
-		<link rel="stylesheet" href="css/modules/menu.css" />
-		<link rel="stylesheet" href="css/main.css" />
-		<link rel="stylesheet" href="css/spa-supplement.css" />
+        <?php include_once('views/styles.php');?>
 		<script src="js/spa-menu-function.js" defer></script>
 	</head>
 	<body>
-    <?php include_once 'views/header.php';?>
-		<main id="main" class="scroll-anchor"> <!-- Het overkoepelende element dat alle pagina's bevat MOET een scroll-anchor zijn met de id 'main' -->
-			<?php include_once 'views/menu.php';?>
-			<aside id="start-point"></aside>
-			<div class="scroll-anchor plx plx-component"> <!-- De content container van elke pagina moet deze classes hebben -->
-				<section class="welkom">
-					<header>
-						<h1>SPA-TPLX</h1>
-						<img src="assets/icons/megaphone.svg" alt="megaphone icon" />
-					</header>
-				</section>
-				<button>test button</button>
-				<a href="#" class="btn">test link button</a>
-				<button class="secondary">secondary button</button>
-				<a href="#" class="btn secondary">secondary link button</a>
-				<button class="filter">test filter button</button>
-				<a href="#" class="btn filter">test link filter button</a>
-				<button class="filter active">active filter button</button>
-				<a href="#" class="btn filter active">active link filter button</a>
-				<h1>THIS IS A HEADING</h1>
-				<h2>This is a sub heading.</h2>
-				<p>This is a paragraph.</p>
-				<a href="#">This is a link</a>
-				<p title="Not Aperture Science!">
-					This is a test chamber. Four walls, ceiling and a floor. Good enough for science.
-				</p>
-			</div>
-			<aside class="scroll-anchor stop"><h2>Over ons</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
-			<aside class="divider"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
-			<div id="over-ons" class="scroll-anchor plx plx-component">
-				<h1>Galerij</h1>
-				<h2>You know, I've been thinking...</h2>
-				<p>When life gives you lemons, don't make lemonade.</p>
-				<p>Make life take the lemons back!</p>
-				<p>Get mad!</p>
-				<p>Demand to see life's manager!</p>
-				<p>Make life rue the day it thought it could give Cave Johnson lemons!</p>
-				<p>Do you know who I am!?</p>
-			</div>
-			<aside class="scroll-anchor stop"><h2>Evenementen</h2></aside>
-			<aside class="divider"></aside>
-			<?php include_once 'views/footer.php';?>
-		</main>
+        <?php include_once 'views/header.php';?>
+        <main id="main" class="scroll-anchor"> <!-- Het overkoepelende element dat alle pagina's bevat MOET een scroll-anchor zijn met de id 'main' -->
+            <?php include_once 'views/menu.php';?>
+
+            <aside id="start-point"></aside>
+            <div class="scroll-anchor plx plx-component"> <!-- De content container van elke pagina moet deze classes hebben -->
+                <?php include('pages/home.php'); ?>
+            </div>
+
+            <aside class="scroll-anchor stop"><h2>Ontmoetingsgroep</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
+            <aside class="divider"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
+            <div id="over-ons" class="scroll-anchor plx plx-component">
+                <?php include('pages/info.php') ?>
+            </div>
+
+            <aside class="scroll-anchor stop"><h2>Evenementen</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
+            <aside class="divider"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
+            <div id="over-ons" class="scroll-anchor plx plx-component">
+                <?php include('pages/evenementen.php') ?>
+            </div>
+
+            <aside class="scroll-anchor stop"><h2>Over ons</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
+            <aside class="divider"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
+            <div id="over-ons" class="scroll-anchor plx plx-component">
+                <?php include('pages/over-ons.php') ?>
+            </div>
+
+            <aside class="scroll-anchor stop"><h2>FAQ</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
+            <aside class="divider"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
+            <div id="over-ons" class="scroll-anchor plx plx-component">
+                <?php include('pages/FAQ.php') ?>
+            </div>
+
+            <aside class="scroll-anchor stop"><h2>Nieuws</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
+            <aside class="divider"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
+            <div id="over-ons" class="scroll-anchor plx plx-component">
+                <?php include('pages/nieuws.php') ?>
+            </div>
+            <?php include('views/footer-plx.php');?>
+        </main>
+        <main id="main-2">
+            <section id="page-content">
+                <?php include 'pages/'.$include.'.php'?>
+            </section>
+            <?php include('views/footer.php');?>
+        </main>
 	</body>
 </html>
