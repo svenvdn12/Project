@@ -29,8 +29,10 @@ textarea {
 }
 
 .contact-form input[type='text'],
+.contact-form input[type='email'],
 .contact-form textarea {
 	padding: 1em 1em 1em 0;
+	width: 100%;
 }
 
 textarea::placeholder {
@@ -50,13 +52,36 @@ textarea::placeholder {
 	padding: 1em 5em 1em 5em;
 	border: solid white 3px;
 	font-weight: bold;
+	cursor: pointer;
+}
+
+ol {
+	list-style-type: none;
+}
+
+.error {
+	color: red;
+}
+
+.form-row2 {
+	width: 100%;
+}
+
+.form-row2 > p {
+	margin-top: 1em;
 }
 
 @media screen and (min-width: 1000px) {
+	.contact-form {
+		align-items: normal;
+	}
 	.form-row {
 		flex-direction: row;
 	}
 	.contact-form input[type='submit'] {
 		width: 100%;
+	}
+	.error {
+		text-align: left;
 	}
 }

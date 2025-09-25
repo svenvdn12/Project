@@ -2,18 +2,52 @@
 declare(strict_types=1);
 ?>
 <!DOCTYPE html>
-<html lang="">
+<html lang="nl-NL">
 
 <head>
     <meta charset="UTF-8">
     <title>Over ons - Chaos Atelier</title>
-    <meta name="description" content="Chaos Atelier Home">
+    <link rel="icon" type="image/svg" href="../assets/icons/brands/site/logo.svg">
+    <meta name="description" content="Het Chaos Atelier is een programma voor jongvolwassenen die zich herkennen in neurodivergentie. Ontstaan vanuit de behoefte aan échte gesprekken met gelijkgestemden. Over je eigen pad vinden, over vriendschap, over volwassen worden, over vastlopen in werk/studie, over de draad weeroppakken, over jezelf zijn/blijven/worden, over je even helemaal kut voelen, over je favoriete hyperfocusen nog zoveel meer.">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/modules/header.css">
     <link rel="stylesheet" href="../css/modules/footer.css">
     <link rel="stylesheet" href="../css/pages/over-ons.css">
     <script src="../js/header-dropdown-menu-toggle.js" defer></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "Name": "Chaos Atelier",
+        "description": "Het Chaos Atelier is een programma voor jongvolwassenen die zich herkennen in neurodivergentie. Ontstaan vanuit de behoefte aan échte gesprekken met gelijkgestemden. Over je eigen pad vinden, over vriendschap, over volwassen worden, over vastlopen in werk/studie, over de draad weeroppakken, over jezelf zijn/blijven/worden, over je even helemaal kut voelen, over je favoriete hyperfocusen nog zoveel meer.",
+        "logo": "logo.svg",
+        "url": "chaosatelier.nl",
+        "email": "hetchaosatelier@gmail.com",
+        "address":{
+            "@type": "PostalAddress",
+            "streetAddress": "Flevoweg 11",
+            "postalCode": "2318 BZ",
+            "addressCountry": "NL"
+        },
+        "founder":{
+            "@type": "Person",
+            "name": "Sofia van der Knaap",
+            "email": "s.vanderknaap@rcnheliomare.nl",
+            "address":{
+            "@type": "PostalAddress",
+            "addressCountry": "NL"
+            }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Audience",
+            "audienceType": "Neurodivergente individuelen"
+        }
+    </script>
 </head>
 
 <body>
