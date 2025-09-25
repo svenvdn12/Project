@@ -1,0 +1,108 @@
+@use 'sass:color';
+@use 'sass:math';
+@use 'functions';
+@use 'colors';
+
+$dividerColor: var(--color-accent);
+$numOfPlx: 3; // Aantal pagina's met de plx-component class
+$contrastFactor: 40; // Minder = contrast++ : Meer = contrast--
+$base: colors.$lightToUse;
+
+:root {
+	scroll-behavior: smooth;
+}
+
+/* Deze class verzorgt de functionaliteit van het parallax systeem zelf
+Tussen elke plx pagina moet een scroll anchor element staan; in mijn voorbeeld gebruik ik een lege <aside class="scroll-anchor divider"> */
+.scroll-anchor {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	height: 80vh; // Deze elementen moeten een vaste height property hebben voor de parallax, flex:1 veroorzaakt chaos (atelier)
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+	scrollbar-width: none;
+}
+
+/* De plx class geeft stijlregels mee die nodig zijn om het parallax systeem soepel te laten werken met het bestaande ontwerp
+Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
+.plx {
+	height: auto;
+	min-height: 74vh; // Het verschil tussen dit en de height van de scroll-anchor is de padding-top van elke pagina
+	display: flex;
+	flex-direction: column;
+	gap: var(--padding-gap-primary);
+	padding: var(--padding-gap-primary);
+}
+
+// De grote page divider
+.divider {
+	background-color: $dividerColor;
+	border-bottom: var(--border-primary);
+	height: 200vh; // Dit kan je hoger of lager maken om de tijd tussen pagina's te veranderen
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.spa-icon {
+	width: 6vw;
+	height: auto;
+	align-self: center;
+	position: relative;
+}
+
+// Dit zorgt er voor dat je niet per ongeluk door scrollt naar de volgende pagina
+.stop {
+	height: 6vh;
+	scroll-snap-align: end;
+	background-color: $dividerColor;
+	border-top: 5px solid white;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+}
+
+.stop h2 {
+	color: white;
+	scroll-snap-align: center;
+	padding-right: 50vw;
+	padding-left: 50vw;
+	align-self: center;
+}
+
+/* Dit is momenteel even experimenteel - simpel gezged krijgt elke opeenvolgende pagina een iets donkerede background-color via een sass functie */
+@for $i from 1 through $numOfPlx {
+	.plx-component:nth-of-type(#{$i + 1}) {
+		background-color: $base;
+	}
+	$base: darken($base, $numOfPlx, $contrastFactor);
+}
+
+@media screen and (min-width: 1000px) {
+	.scroll-anchor {
+		height: 85vh;
+	}
+
+	.plx {
+		min-height: 84vh;
+		padding-bottom: 5vh;
+		scroll-snap-align: start;
+	}
+
+	.stop {
+		display: none;
+	}
+
+	.divider {
+		height: 150vh;
+		border-top: var(--border-primary);
+	}
+}

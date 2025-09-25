@@ -1,0 +1,57 @@
+@use 'sass:math';
+@use 'sass:color';
+@use 'functions';
+@use 'colors';
+
+$numOfItems: 5; // Aantal pagina's met de plx-component class
+$contrastFactor: 140; // Minder = contrast++ : Meer = contrast--
+
+$base: colors.$darkToUse;
+
+$base: brighter($base, $numOfItems, $contrastFactor);
+
+#main > .menu {
+	background-color: var(--color-secondary);
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#main > .menu ul {
+	align-self: center;
+	width: 100%;
+	height: auto;
+	gap: 0;
+	text-align: center;
+}
+
+#main > .menu li {
+	height: 11vh;
+	width: inherit;
+	align-self: center;
+	font-size: 1.2em;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#main > .menu li a {
+	align-self: center;
+}
+
+#main > .menu aside {
+	height: 20%;
+	background-color: var(--color-primary);
+}
+
+@for $i from 1 through $numOfItems {
+	#main > .menu li:nth-of-type(#{$i}) {
+		background-color: $base;
+	}
+	$base: darken($base);
+}
+
+#main > .menu li:last-of-type {
+	background-color: var(--color-primary);
+}

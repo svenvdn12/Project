@@ -6,7 +6,7 @@ let isOpen = false;
 
 button.addEventListener('click', function () {
 	if (isOpen) {
-		document.querySelector('.welkom').scrollIntoView({ behavior: 'smooth' });
+		document.querySelector('#start-point').scrollIntoView({ behavior: 'smooth' });
 		isOpen = false;
 	} else {
 		document.querySelector('.menu').scrollIntoView({ behavior: 'smooth' });
