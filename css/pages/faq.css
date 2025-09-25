@@ -1,3 +1,7 @@
+#faq-section-header {
+	width: 100%;
+}
+
 .faq-header {
 	display: flex;
 	justify-content: center;
@@ -20,7 +24,7 @@ h2 {
 	/* margin-right: 0.5em; */
 	/* font-size: var(--font-size-xl); */
 	font-size: 1.3em;
-    max-width: 75vw;
+	max-width: 75vw;
 }
 
 p {

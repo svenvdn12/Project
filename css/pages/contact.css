@@ -1,3 +1,7 @@
+#contact-section-header {
+	width: 100%;
+}
+
 .contact-content p:first-child {
 	margin-bottom: 2em;
 	font-size: var(--font-size-l);

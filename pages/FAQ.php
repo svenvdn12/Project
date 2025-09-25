@@ -1,4 +1,4 @@
-<section>
+<section id="faq-section-header">
     <header class="faq-header">
         <h1>FAQ</h1>
         <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
