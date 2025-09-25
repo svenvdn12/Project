@@ -1,7 +1,7 @@
 <section class="over-ons">
     <header>
         <h1>OVER ONS</h1>
-        <img src="../assets/icons/megaphone.svg" alt="megaphone icon">
+        <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
     </header>
     <h2>Het Chaos Atelier</h2>
     <p>
@@ -74,17 +74,17 @@
     <h2>Mede mogelijk gemaakt door:</h2>
     <section class="item-grid">
         <article class="item">
-            <img src="../assets/images/people/sofia.png" alt="Sofia">
+            <img src="./assets/images/people/sofia.png" alt="Sofia">
             <h2>Sofia - Opperchaoot</h2>
             <button>LEES MEER</button>
         </article>
         <article class="item">
-            <img src="../assets/images/people/judith.png" alt="Judith">
+            <img src="./assets/images/people/judith.png" alt="Judith">
             <h2>Judith - Begeleider</h2>
             <button>LEES MEER</button>
         </article>
         <article class="item">
-            <img src="../assets/images/people/milo.png" alt="Milo">
+            <img src="./assets/images/people/milo.png" alt="Milo">
             <h2>Milo - Designchaoot</h2>
             <button>LEES MEER</button>
         </article>
