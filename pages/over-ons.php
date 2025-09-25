@@ -13,7 +13,7 @@
         en nog zoveel meer.
     </p>
     <video controls>
-        <source src="assets/videos/" type="video/"/>
+        <source src="assets/videos/video.mp4" type="video/"/>
         <p>video niet geladen of niet ondersteund door browser</p>
     </video>
     <h2>Ontmoet, ontdek en deel.</h2>

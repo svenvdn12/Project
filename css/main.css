@@ -101,6 +101,7 @@ main section {
 	display: flex;
 	flex-direction: column;
 	gap: var(--padding-gap-primary);
+    width: 100%;
 }
 
 /* html element styles */
@@ -429,7 +430,7 @@ video {
         padding-left: 165px;
     }
     #page-content {
-        padding: 20px;
+        padding: var(--padding-gap-secondary);
         /* min-height: calc(100% - 305px); */
         flex: 1;
     }
