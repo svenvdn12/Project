@@ -65,6 +65,7 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 }
 
 /* Dit is momenteel even experimenteel - simpel gezged krijgt elke opeenvolgende pagina een iets donkerede background-color via een sass functie */
+/* Als je dit wilt veranderen kun je simpelweg één van de hsl waardes in sass/_colors.scss aanpassen */
 .plx-component:nth-of-type(2) {
 	background-color: hsl(234, 68%, 42%);
 }
