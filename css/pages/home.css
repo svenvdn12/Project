@@ -1,11 +1,10 @@
+
 #page-content-container {
 	font-size: var(--font-size-l);
 }
 #content-main-section {
 	border: var(--border-primary);
-}
-#content-header {
-	border: none;
+    gap: 0;
 }
 #home-image {
 	width: 100%;
