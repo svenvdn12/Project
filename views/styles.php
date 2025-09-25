@@ -10,3 +10,4 @@
 <link rel="stylesheet" href="css/pages/contact.css" />
 <link rel="stylesheet" href="css/pages/FAQ.css" />
 <link rel="stylesheet" href="css/pages/nieuws.css" />
+<link rel="stylesheet" href="css/modules/program.css" />
