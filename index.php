@@ -82,6 +82,12 @@
                 <?php include('pages/over-ons.php') ?>
             </div>
 
+            <aside class="scroll-anchor stop"><h2>Contact</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
+            <aside class="divider"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
+            <div id="FAQ" class="scroll-anchor plx plx-component">
+                <?php include('pages/contact.php') ?>
+            </div>
+
             <aside class="scroll-anchor stop"><h2>FAQ</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
             <aside class="divider"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
             <div id="FAQ" class="scroll-anchor plx plx-component">
