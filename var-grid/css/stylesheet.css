@@ -21,21 +21,6 @@ body {
 .var-grid img {
 	display: flex;
 	flex: 1;
-	/* min-width: 50px;
-	min-height: 50px; */
-	height: 20vh;
 	width: auto;
 	object-fit: cover;
 }
-
-/* .var-grid img:nth-child(odd(2n+2)) {
-	flex: 4;
-}
-
-.var-grid img:nth-child(2n + 2) {
-	flex: 2;
-}
-
-.var-grid img:nth-child(2n + 6) {
-	flex: 3;
-} */

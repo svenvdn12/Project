@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>Snapping Galery</title>
+		<title>Stone Gallery</title>
 		<link rel="stylesheet" href="css/stylesheet.css" />
 		<link rel="stylesheet" href="../css/main.css" />
 		<script defer src="js/gridGenerator.js"></script>
@@ -12,21 +12,20 @@
 		<div id="container">
 			<div class="var-grid" id="var-grid-id">
 				<?php
+					$randomNum = rand(1,10);
+					$index = 1;
+					echo '<!--' . $randomNum . '-->';
 					for ($i = 0; $i < 100; $i++) {
-						$randomNum = rand(1,10);
+						
 						if ($randomNum === 7){
-							if ($i % 2 === 0) {
-								echo '<img src="media/placeholder1.jpg">';
+							$index += 1;
+
+							if ($index > 4){
+								$index = 1;
 							}
-							elseif ($i % 3 === 0){
-								echo '<img src="media/placeholder3.jpg">';
-							}
-							elseif ($i % 4 === 0){
-								echo '<img src="media/placeholder4.jpg">';
-							}
-							elseif ($i % 2 === 1) {
-								echo '<img src="media/placeholder2.jpg">';
-							}
+
+							echo '<img src="media/placeholder' . $index . '.jpg">';
+
 						} else {
 							echo '<img src="media/placeholder' . rand(1,4) . '.jpg">';
 						}
