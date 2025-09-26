@@ -15,33 +15,33 @@
     <form action="<?php echo htmlspecialchars("index.php?page=info"); ?>" id="meeting-form" method="post">
         <section id="form-section">
             <div class="form-row2">
-                <input type="text" name="name-signup-input" id="name-signup-input" placeholder="Naam..." value="<?= $name ? $name : ''?>" />
-                <?php if (!empty($nameError)){ ?>
-                    <p class="error"><?php echo $nameError; ?></p>
-                <?php } ?>
+                <input type="text" name="name-signup-input" id="name-signup-input" placeholder="Naam..." value="<?= htmlspecialchars($formData['name']) ?>" />
+                    <?php if (!empty($formData['errors']['name'])): ?>
+                        <p class="error error2"><?= $formData['errors']['name'] ?></p>
+                    <?php endif; ?>
             </div>
             <div class="form-row2">
-                <input type="email" name="email-signup-input" id="email-signup-input" placeholder="E-mailadres..." value="<?= $email ? $email : ''?>" />
-                <?php if (!empty($emailError)){ ?>
-                    <p class="error"><?php echo $emailError; ?></p>
-                <?php } ?>
+                <input type="email" name="email-signup-input" id="email-signup-input" placeholder="E-mailadres..." value="<?= htmlspecialchars($formData['email']) ?>" />
+                    <?php if (!empty($formData['errors']['email'])): ?>
+                        <p class="error error2"><?= $formData['errors']['email'] ?></p>
+                    <?php endif; ?>
             </div>
             <div class="form-row2">
-                <input type="number" name="age-signup-input" id="age-signup-input" placeholder="20" value="<?= $ageInput ? $ageInput : ''?>" />
-                <?php if (!empty($ageError)){ ?>
-                    <p class="error"><?php echo $ageError; ?></p>
-                <?php } ?>
+                <input type="number" name="age-signup-input" id="age-signup-input" placeholder="20" value="<?= htmlspecialchars($formData['age']) ?>" />
+                    <?php if (!empty($formData['errors']['age'])): ?>
+                        <p class="error error2"><?= $formData['errors']['age'] ?></p>
+                    <?php endif; ?>
             </div>
         </section>
-        <textarea placeholder="Rede van aanmelding..." id="reason-signup-input" name="reason-signup-input" ><?= $reason ? $reason : ''?></textarea>
-        <?php if (!empty($reasonError)){ ?>
-                <p class="error"><?php echo $reasonError; ?></p>
-            <?php } ?>
-        <textarea placeholder="Hoe ben je bij het chaos atelier gekomen..." id="source-signup-input" name="source-signup-input" ><?= $source ? $source : ''?></textarea>
-        <?php if (!empty($sourceError)){ ?>
-                <p class="error"><?php echo $sourceError; ?></p>
-        <?php } ?>
-        <textarea placeholder="Opmerkingen..." id="note-signup-input" name="note-signup-input"><?= $note ? $note : ''?></textarea>
+        <textarea placeholder="Rede van aanmelding..." id="reason-signup-input" name="reason-signup-input" ><?= htmlspecialchars($formData['reason']) ?></textarea>
+            <?php if (!empty($formData['errors']['reason'])): ?>
+                <p class="error"><?= $formData['errors']['reason'] ?></p>
+            <?php endif; ?>
+        <textarea placeholder="Hoe ben je bij het chaos atelier gekomen..." id="source-signup-input" name="source-signup-input" ><?= htmlspecialchars($formData['source']) ?></textarea>
+            <?php if (!empty($formData['errors']['source'])): ?>
+                <p class="error"><?= $formData['errors']['source'] ?></p>
+            <?php endif; ?>
+        <textarea placeholder="Opmerkingen..." id="note-signup-input" name="note-signup-input"><?= htmlspecialchars($formData['note']) ?></textarea>
         <button type="submit" id="info-submit" name="info-submit">VERSTUUR</button>
     </form>
 </div>
