@@ -3,11 +3,13 @@
         <section class="footer-col">
             <h2>Pagina's</h2>
             <ul>
-                <li><a href="#">Ontmoetingsgroep</a></li>
-                <li><a href="#">Evenementen</a></li>
-                <li><a href="#">Over ons</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Nieuws</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#info">Ontmoetingsgroep</a></li>
+                <li><a href="#evenementen">Evenementen</a></li>
+                <li><a href="#over-ons">Over ons</a></li>
+                <li><a href="#contact"></a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+                <li><a href="#nieuws">Nieuws</a></li>
             </ul>
         </section>
         <section class="footer-col">
