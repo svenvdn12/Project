@@ -1,3 +1,4 @@
+//section class hidden nog toevoegen.
 <section class="over-ons">
     <header>
         <h1>OVER ONS</h1>
@@ -73,6 +74,7 @@
     </details>
 </section>
 <hr>
+//hier toevoegen
 <section class="mogelijk-gemaakt-door">
     <h2>Mede mogelijk gemaakt door:</h2>
     <section class="item-grid">

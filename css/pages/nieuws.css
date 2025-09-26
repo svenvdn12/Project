@@ -1,3 +1,4 @@
+/* Checken of deze comments nog nodig zijn */
 /*.news-article{
     display: flex;
     flex-direction: column;
@@ -43,29 +44,4 @@
 		display: block;
 		transform: translateX(-0.8vw);
 	}
-
-	/*.news-article {
-		flex-direction: row;
-		gap: 0;
-	}
-	.news-article-sub {
-		align-items: flex-start;
-		justify-content: center;
-		gap: 10px;
-		border-left: var(--border-primary);
-		height: 100%;
-		padding: 10px;
-	}
-	.news-article-sub > p {
-		text-align: start;
-		padding: 0;
-	}
-	.news-article > img {
-		height: 350px;
-		width: auto;
-		border: none;
-	}
-	.news-article-sub > a {
-		width: 300px;
-	}*/
 }

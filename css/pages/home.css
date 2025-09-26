@@ -5,6 +5,7 @@
 #page-content-container {
 	font-size: var(--font-size-l);
 }
+
 #content-main-section {
 	border: var(--border-primary);
     gap: 0;
@@ -12,8 +13,7 @@
 #home-image {
 	width: 100%;
 	height: auto;
-	/* border-top: var(--border-primary); */
-    border-bottom: var(--border-primary);
+  border-bottom: var(--border-primary);
 }
 #main-text {
 	text-align: center;

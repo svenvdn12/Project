@@ -10,7 +10,6 @@
                 <li><a href="index.php?page=contact">Contact</a></li>
                 <li><a href="index.php?page=FAQ">FAQ</a></li>
                 <li><a href="index.php?page=nieuws">Nieuws</a></li>
-                <!-- might be wrong ^ -->
             </ul>
         </section>
         <section class="footer-col">

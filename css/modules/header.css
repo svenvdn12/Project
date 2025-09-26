@@ -7,10 +7,10 @@
 	box-shadow: var(--shadow-bottom);
 	z-index: 999;
 }
-
 /* #page-header:has(#hamburger-toggle:checked) {
 	min-height: 100vh;
 } */
+
 
 #page-header .header-top {
 	display: flex;
@@ -109,19 +109,20 @@
 #header-dropdown-menu {
     display: none;
 }
+
 @media screen and (min-width: 1000px) {
 	#page-header {
 		border-right: var(--border-primary);
+
 		width: 190px;
 		box-shadow: var(--shadow-right);
 		position: fixed;
-        height: 100%;
-        
+    height: 100%;
 	}
 
 	#page-header .header-top {
 		border: none;
-        box-shadow: none;
+    box-shadow: none
 	}
 
 	.hamburger-toggle-wrapper {
@@ -134,4 +135,93 @@
 		max-height: 100%;
 		text-align: start;
 	}
+
+}
+
+/*Key frames*/
+
+@keyframes hamburger-top {
+	0% {
+		transform: rotateX(90deg);
+		background-color: khaki;
+	}
+	90% {
+		transform: rotateX(0deg);
+		background-color: khaki;
+	}
+	100% {
+		transform: rotateX(0deg);
+		background-color: var(--text-color-primary);
+	}
+}
+
+@keyframes hamburger-middle {
+	0% {
+		transform: rotateX(90deg);
+		background-color: brown;
+	}
+	90% {
+		transform: rotateX(0deg);
+		background-color: brown;
+	}
+	100% {
+		transform: rotateX(0deg);
+		background-color: var(--text-color-primary);
+	}
+}
+
+@keyframes hamburger-bottom {
+	0% {
+		transform: rotateX(90deg);
+		background-color: khaki;
+	}
+	90% {
+		transform: rotateX(0deg);
+		background-color: khaki;
+	}
+	100% {
+		transform: rotateX(0deg);
+		background-color: var(--text-color-primary);
+	}
+}
+
+@keyframes site-logo {
+	0% {
+		transform: rotateX(90deg);
+	}
+	90% {
+		transform: rotateX(0deg);
+	}
+	100% {
+		transform: rotateX(0deg);
+	}
+}
+
+@keyframes dropdown-items {
+	from {
+		transform: translateX(-30px);
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
+
+.top {
+	animation: hamburger-top 1s ease-in;
+}
+
+.middle {
+	animation: hamburger-middle 1s ease-in;
+}
+
+.bottom {
+	animation: hamburger-bottom 1s ease-in;
+}
+
+.site-logo {
+	animation: site-logo 1s ease-in;
+}
+
+#header-dropdown-menu ul li {
+	animation: dropdown-items 1s ease-in;
 }
