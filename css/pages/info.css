@@ -1,11 +1,18 @@
+.border-content {
+	border: var(--border-primary);
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
 main {
 	text-align: center;
-	font-size: var(--font-size-l);
 }
 main > section {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: var(--padding-gap-primary);
 }
 #info-image {
 	margin: 0 auto;
@@ -23,32 +30,29 @@ textarea {
 	padding: 1em;
 	width: 100%;
 }
-#info-submit {
-	width: 80%;
+
+textarea {
+	padding-left: 2em;
 }
+
+#info-submit {
+	width: 100%;
+}
+
 input,
 textarea,
 textarea::placeholder {
 	color: var(--color-accent);
-}
-
-input[type='text'],
-input[type='email'],
-input[type='number'] {
 	font-family: 'azeret-mono', monospace;
 }
 
 .error {
 	color: red;
-	margin-bottom: 1em;
+	margin-top: 1em;
 }
 
 .form-row2 {
 	width: 100%;
-}
-
-.form-row2 > p {
-	margin-top: 0.8em;
 }
 
 @media screen and (min-width: 1000px) {
@@ -62,10 +66,8 @@ input[type='number'] {
 		flex-direction: row;
 		align-items: normal;
 	}
-	#meeting-form {
-		align-items: normal;
-	}
-	#info-submit {
+	.error {
+		text-align: left;
 		width: 100%;
 	}
 }

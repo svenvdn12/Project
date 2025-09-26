@@ -84,7 +84,7 @@
                       </article>
                       <article>
                         <details>
-                          <summary><h2>Ik heb geen bevestiging gekregen?</h2></summary>
+                          <summary><h2>Ik heb geen bevestiging gekregen?<!--<img src="../assets/icons/arrow-right.svg">--></h2></summary>
                           <p>Heb je geen bevestigingsbericht gekregen van jouw deelname? Check dan even je spambox, of stuur ons een berichtje.</p>
                         </details>
                       </article>
