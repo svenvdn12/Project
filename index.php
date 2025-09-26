@@ -50,6 +50,7 @@
 		<meta charset="utf-8" />
 		<title>Chaos Atelier</title>
 		<meta name="description" content="Chaos Atelier website." />
+        <link rel="icon" href="assets/icons/brands/site/logo.svg">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
         <?php include_once('views/styles.php');?>
 		<script src="js/spa-menu-function.js" defer></script>

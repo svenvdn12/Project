@@ -22,6 +22,11 @@ main > section {
 	gap: 1em;
 }
 
+.mogelijk-gemaakt-door > h2 {
+	margin-top: var(--padding-gap-primary);
+	margin-bottom: var(--padding-gap-primary);
+}
+
 @media screen and (min-width: 1000px) {
 	main > section {
 		align-items: start;

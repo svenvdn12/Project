@@ -1,9 +1,10 @@
-//section class hidden nog toevoegen.
+<!-- section class hidden nog toevoegen. -->
 <section class="over-ons">
-    <header>
+    <header class="page-header">
         <h1>OVER ONS</h1>
         <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
     </header>
+    <div class="border-content">
     <h2>Het Chaos Atelier</h2>
     <p>
         Het Chaos Atelier is een programma voor jongvolwassenen die zich herkennen in neurodivergentie.
@@ -73,8 +74,6 @@
         </section>
     </details>
 </section>
-<hr>
-//hier toevoegen
 <section class="mogelijk-gemaakt-door">
     <h2>Mede mogelijk gemaakt door:</h2>
     <section class="item-grid">
@@ -107,3 +106,4 @@
         </article>
     </section>
 </section>
+</div>

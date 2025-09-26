@@ -1,4 +1,5 @@
 <?php
+    
     $name = $email = $reason = $source = $ageInput = $message = $note = '';
     $nameError = $emailError = $ageError = $reasonError = $sourceError = '';
 
@@ -18,8 +19,7 @@
         } else {
             $emailError = 'Email is verplicht.';
         }
-        if (!empty($_POST['age-signup-input'])) {
-            // echo gettype($_POST['age-signup-input']); 
+        if (!empty($_POST['age-signup-input'])) { 
             $ageInput = intval($_POST['age-signup-input']);
             if ($ageInput <= 0) {
                 $ageError = 'Voer een geldig nummer in.';
@@ -39,3 +39,4 @@
             $note = $_POST['note-signup-input'];
         }
     }
+
