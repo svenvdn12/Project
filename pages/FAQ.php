@@ -2,17 +2,51 @@
     declare(strict_types=1);
 ?>
 <!DOCTYPE html>
-<html lang="NL-nl">
+<html lang="nl-NL">
     <head>
         <meta charset="UTF-8">
-        <title>FAQ</title>
-        <meta name="description" content="Chaos Atelier's FAQ Pagina">
+        <title>FAQ - Chaos Atelier</title>
+        <link rel="icon" type="image/svg" href="../assets/icons/brands/site/logo.svg">
+        <meta name="description" content="Vind hier wat de meest gestelde vragen zijn over de Chaos Atelier.">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/pages/faq.css">
         <link rel="stylesheet" href="../css/modules/header.css">
         <link rel="stylesheet" href="../css/modules/footer.css">
         <script src="../js/header-dropdown-menu-toggle.js" defer></script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "Name": "Chaos Atelier",
+            "description": "Vind hier alle informatie over onze activiteiten van de Chaos Atelier!",
+            "logo": "logo.svg",
+            "url": "chaosatelier.nl",
+            "email": "hetchaosatelier@gmail.com",
+            "address":{
+                "@type": "PostalAddress",
+                "streetAddress": "Flevoweg 11",
+                "postalCode": "2318 BZ",
+                "addressCountry": "NL"
+            },
+            "founder":{
+                "@type": "Person",
+                "name": "Sofia van der Knaap",
+                "email": "s.vanderknaap@rcnheliomare.nl",
+                "address":{
+                "@type": "PostalAddress",
+                "addressCountry": "NL"
+                }
+            }
+        }
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Audience",
+                "audienceType": "Neurodivergente individuelen"
+            }
+        </script>
     </head>
     <body>
         <div id="container">
@@ -50,7 +84,7 @@
                       </article>
                       <article>
                         <details>
-                          <summary><h2>Ik heb geen bevestiging gekregen?</h2></summary>
+                          <summary><h2>Ik heb geen bevestiging gekregen?<!--<img src="../assets/icons/arrow-right.svg">--></h2></summary>
                           <p>Heb je geen bevestigingsbericht gekregen van jouw deelname? Check dan even je spambox, of stuur ons een berichtje.</p>
                         </details>
                       </article>
