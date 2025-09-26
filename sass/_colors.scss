@@ -1,0 +1,8 @@
+@use 'sass:color';
+
+$blueDark: hsl(240, 100%, 19%);
+$blueLight: hsl(234, 68%, 42%);
+$white: hsl(0, 0%, 100%);
+
+$darkToUse: ($blueDark); // De secondaire basiskleur van de SPA features
+$lightToUse: ($blueLight); // De primaire basiskleur van de SPA features

@@ -1,0 +1,12 @@
+@use 'sass:color';
+@use 'sass:math';
+
+@function brighter($inColor, $numofItems, $contrastFactor) {
+	$contrast: math.percentage(math.div($numofItems, $contrastFactor));
+	@return color.adjust($inColor, $lightness: $contrast);
+}
+
+@function darker($inColor, $numofItems, $contrastFactor) {
+	$contrast: math.percentage(math.div($numofItems, $contrastFactor));
+	@return color.adjust($inColor, $lightness: -$contrast);
+}

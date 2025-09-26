@@ -1,3 +1,7 @@
+#faq-section-header {
+	width: 100%;
+}
+
 .faq-header {
 	display: flex;
 	justify-content: center;
@@ -20,9 +24,16 @@ main {
 	min-width: 100%;
 }
 
+/* main {
+	min-width: 100%;
+} */
+
 h2 {
 	display: inline-block;
-	margin-right: 0.5em;
+	/* margin-right: 0.5em; */
+	/* font-size: var(--font-size-xl); */
+	font-size: 1.3em;
+	max-width: 75vw;
 }
 
 p {

@@ -8,12 +8,15 @@
 
 main {
 	text-align: center;
+	font-size: var(--font-size-l);
 }
+
 main > section {
 	display: flex;
 	flex-direction: column;
 	gap: var(--padding-gap-primary);
 }
+
 #info-image {
 	margin: 0 auto;
 }
@@ -42,7 +45,13 @@ textarea {
 input,
 textarea,
 textarea::placeholder {
-	color: var(--color-accent);
+color: var(--color-accent);
+}
+
+/* Waarschijnlijk nodig? */
+input[type='text'],
+input[type='email'],
+input[type='number'] {
 	font-family: 'azeret-mono', monospace;
 }
 
@@ -51,8 +60,13 @@ textarea::placeholder {
 	margin-top: 1em;
 }
 
+/* Deze kan weg? */
 .form-row2 {
 	width: 100%;
+}
+
+.form-row2 > p {
+	margin-top: 0.8em;
 }
 
 @media screen and (min-width: 1000px) {
@@ -66,8 +80,9 @@ textarea::placeholder {
 		flex-direction: row;
 		align-items: normal;
 	}
-	.error {
-		text-align: left;
-		width: 100%;
+
+  /* doet dit iets? */
+	#meeting-form {
+		align-items: normal;
 	}
-}
+  

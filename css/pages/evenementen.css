@@ -1,3 +1,4 @@
+/* Incomming from SPA */
 main {
 	display: flex;
 	flex-direction: column;
@@ -8,7 +9,21 @@ main {
 	display: flex;
 	gap: 10px;
 	flex-wrap: wrap;
+	width: 100%;
 }
+.events-header {
+	border: var(--border-primary);
+}
+#category-selector a {
+	width: 100%;
+	text-align: center;
+}
+#events {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+/* Checken of .event-article nog bestaat anders kunnen de regels weg */
 .event-article {
 	display: flex;
 	flex-direction: column;
@@ -53,6 +68,14 @@ main {
 	width: 80%;
 }
 @media screen and (min-width: 1000px) {
+	#category-selector {
+		width: 100%;
+    flex-direction: row;
+	}
+	#category-selector a {
+		width: fit-content;
+		text-align: center;
+	}
 	.event-article {
 		flex-direction: row;
 		gap: 0;

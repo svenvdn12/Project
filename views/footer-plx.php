@@ -1,15 +1,15 @@
-<footer id="page-footer">
+<footer id="page-footer" class="scroll-anchor plx plx-component">
     <section class="footer-content">
         <section class="footer-col">
             <h2>Pagina's</h2>
             <ul>
-                <li><a href="index.php?page=home">Home</a></li>
-                <li><a href="index.php?page=info">Ontmoetingsgroep</a></li>
-                <li><a href="index.php?page=evenementen">Evenementen</a></li>
-                <li><a href="index.php?page=over-ons">Over ons</a></li>
-                <li><a href="index.php?page=contact">Contact</a></li>
-                <li><a href="index.php?page=FAQ">FAQ</a></li>
-                <li><a href="index.php?page=nieuws">Nieuws</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#info">Ontmoetingsgroep</a></li>
+                <li><a href="#evenementen">Evenementen</a></li>
+                <li><a href="#over-ons">Over ons</a></li>
+                <li><a href="#contact"></a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+                <li><a href="#nieuws">Nieuws</a></li>
             </ul>
         </section>
         <section class="footer-col">

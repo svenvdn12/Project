@@ -1,7 +1,12 @@
+#contact-section-header {
+	width: 100%;
+}
+
 main {
 	display: flex;
 	flex-direction: column;
 	gap: var(--padding-gap-primary);
+
 }
 
 .border-content {
@@ -26,6 +31,12 @@ main {
 	align-items: center;
 }
 
+.contact-form input[type='text'],
+.contact-form input[type='email'],
+.contact-form textarea {
+	padding: 1em 1em 1em 0;
+}
+/* Merged from The Great Merge*/
 .form-row,
 .form-row2,
 textarea,
@@ -46,12 +57,31 @@ textarea {
 	padding: 1em;
 }
 
+
+/* Kijken of nog nodig is
+.contact-form input[type='submit'] {
+	background-color: var(--color-accent);
+	color: white;
+	padding: 1em 5em 1em 5em;
+	border: solid white 3px;
+	font-weight: bold;
+	cursor: pointer;
+}
+*/
 textarea {
 	padding-left: 2em;
 }
 
 .error {
 	color: red;
+}
+
+/* misschien dubbel */
+.form-row2 {
+	width: 100%;
+}
+
+.form-row2 > p {
 	margin-top: 1em;
 }
 
@@ -61,6 +91,9 @@ textarea {
 	}
 	.form-row {
 		flex-direction: row;
+	}
+	.error {
+		text-align: left;
 	}
 	.error {
 		text-align: left;

@@ -1,115 +1,117 @@
 /* Het zou mijn voorkeur hebben als ik deze mag blijven onderhouden */
 
 .desktop-only {
-  display: none;
+	display: none;
 }
 
 .program {
-  border: var(--border-primary);
-  background-color: var(--color-secondary);
-  width: 100%;
-  align-self: center;
+	border: var(--border-primary);
+	background-color: var(--color-secondary);
+	width: 100%;
+	align-self: center;
+	font-size: 0.9em;
 }
 .program > img {
-  border-bottom: var(--border-primary);
-  width: inherit;
-  height: auto;
+	border-bottom: var(--border-primary);
+	width: inherit;
+	height: auto;
 }
 .program > section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--padding-gap-primary);
-  padding: 2.5vh 6vw;
-  min-height: 20vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: var(--padding-gap-primary);
+	padding: 2.5vh 6vw;
+	min-height: 20vh;
 }
 .program > section > p,
 .program > section > h2 {
-  text-align: center;
+	text-align: center;
 }
 .program #info-grid {
-  align-self: center;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+	align-self: center;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
 }
 .program #info-grid > div {
-  min-width: 25vw;
-  height: 5vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+	min-width: 25vw;
+	height: 5vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
 }
 .program #info-grid > div > img,
 .program #info-grid > div > h2 {
-  display: inline;
-  text-align: end;
-  align-self: center;
+	display: inline;
+	text-align: end;
+	align-self: center;
 }
 .program button {
-  align-self: center;
-  width: 100%;
+	align-self: center;
+	width: 100%;
 }
 
 @media screen and (min-width: 1000px) {
-  .program {
-    display: flex;
-    width: 40.5vw;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-  }
-  .program > img {
-    border-bottom: none;
-    border-right: var(--border-primary);
-    object-fit: cover;
-    width: 7vw;
-  }
-  .program > section {
-    justify-content: flex-start;
-    padding: 1vw;
-    gap: 1vh;
-  }
-  .program > section > p,
-  .program > section > h2 {
-    align-self: start;
-    text-align: start;
-  }
-  .program > section > p {
-    height: 55%;
-  }
-  .program #info-grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-self: flex-end;
-    width: 100%;
-    gap: 1.2vw;
-  }
-  .program #info-grid > div {
-    gap: 8px;
-    min-width: 3vw;
-  }
-  .program #info-grid img {
-    width: 1.3vw;
-    height: auto;
-  }
-  .program button:not(.desktop-only) {
-    display: none;
-  }
-  .program .desktop-only {
-    display: inline-block;
-    width: 7.5vw;
-    align-self: flex-end;
-    position: relative;
-    left: 1vw;
-  }
+	.program {
+		display: flex;
+		width: 40vw;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+	}
+	.program > img {
+		border-bottom: none;
+		border-right: var(--border-primary);
+		object-fit: cover;
+		width: 7vw;
+	}
+	.program > section {
+		justify-content: flex-start;
+		padding: 1vw;
+		gap: 1vh;
+	}
+	.program > section > p,
+	.program > section > h2 {
+		align-self: start;
+		text-align: start;
+	}
+	.program > section > p {
+		height: 55%;
+	}
+	.program #info-grid {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-self: flex-end;
+		width: 100%;
+		gap: 1vw;
+	}
+	.program #info-grid > div {
+		gap: 8px;
+		min-width: 3vw;
+	}
+	.program #info-grid img {
+		width: 1.2vw;
+		height: auto;
+	}
+	.program button:not(.desktop-only) {
+		display: none;
+	}
+	.program .desktop-only {
+		display: inline-block;
+		width: 7.5vw;
+		align-self: flex-end;
+		position: relative;
+		left: 1vw;
+	}
 }
 @media screen and (max-width: 1800px) {
-  .program .desktop-only {
-    left: 0;
-    right: 0.5vw;
-  }
+	.program .desktop-only {
+		left: 0;
+		right: 0.5vw;
+	}
 }
 
 /*# sourceMappingURL=program.css.map */
