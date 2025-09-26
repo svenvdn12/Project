@@ -15,6 +15,7 @@ declare(strict_types=1);
     <link rel="stylesheet" href="../css/modules/footer.css">
     <link rel="stylesheet" href="../css/pages/over-ons.css">
     <script src="../js/header-dropdown-menu-toggle.js" defer></script>
+    <script src="../js/person-modal.js" defer></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -49,7 +50,6 @@ declare(strict_types=1);
         }
     </script>
 </head>
-
 <body>
     <div id="container">
         <?php include_once('../views/header.php'); ?>
@@ -137,16 +137,25 @@ declare(strict_types=1);
                             <img src="../assets/images/people/sofia.png" alt="Sofia">
                             <h2>Sofia - Opperchaoot</h2>
                             <button>LEES MEER</button>
+                            <section class="hidden">
+                                <p>Dit is heel veel leuke tekst over Sofia, stel je maar eens voor dat dit 3 alinea's unieke zinnen zijn. Dit is heel veel leuke tekst over Sofia, stel je maar eens voor dat dit 3 alinea's unieke zinnen zijn. Dit is heel veel leuke tekst over Sofia, stel je maar eens voor dat dit 3 alinea's unieke zinnen zijn. Dit is heel veel leuke tekst over Sofia, stel je maar eens voor dat dit 3 alinea's unieke zinnen zijn. Dit is heel veel leuke tekst over Sofia, stel je maar eens voor dat dit 3 alinea's unieke zinnen zijn.</p>
+                            </section>
                         </article>
                         <article class="item">
                             <img src="../assets/images/people/judith.png" alt="Judith">
                             <h2>Judith - Begeleider</h2>
                             <button>LEES MEER</button>
+                            <section class="hidden">
+                                <p>Dit is heel veel leuke tekst over Judith, stel je maar eens voor dat dit 3 alinea's unieke zinnen zijn. Dit is heel veel leuke tekst over Judith, stel je maar eens voor dat dit 3 alinea's unieke zinnen zijn. Dit is heel veel leuke tekst over Judith, stel je maar eens voor dat dit 3 alinea's unieke zinnen zijn.</p>
+                            </section>
                         </article>
                         <article class="item">
                             <img src="../assets/images/people/milo.png" alt="Milo">
                             <h2>Milo - Designchaoot</h2>
                             <button>LEES MEER</button>
+                            <section class="hidden">
+                                <p>Dit is heel veel leuke tekst over Milo, stel je maar eens voor dat dit 3 alinea's unieke zinnen zijn. Dit is heel veel leuke tekst over Milo, stel je maar eens voor dat dit 3 alinea's unieke zinnen zijn. Dit is heel veel leuke tekst over Milo, stel je maar eens voor dat dit 3 alinea's unieke zinnen zijn.</p>
+                            </section>
                         </article>
                     </section>
                     <h2>Samenwerkingen:</h2>
@@ -167,5 +176,4 @@ declare(strict_types=1);
         </div>
     </div>
 </body>
-
 </html>
