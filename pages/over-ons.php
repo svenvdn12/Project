@@ -1,9 +1,11 @@
 <!-- section class hidden nog toevoegen. -->
-<section class="over-ons">
-    <header class="page-header">
+    <header class="home-header">
         <h1>OVER ONS</h1>
-        <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
+        <div class="hidden-img">
+            <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
+        </div>
     </header>
+<section class="over-ons">
     <div class="border-content">
     <h2>Het Chaos Atelier</h2>
     <p>

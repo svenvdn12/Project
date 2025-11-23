@@ -1,10 +1,12 @@
-<section class="main-faq-content">
-    <section id="faq-section-header">
-        <header class="faq-header page-header">
-            <h1>FAQ</h1>
+<section id="faq-section-header">
+    <header class="faq-header page-header">
+        <h1>FAQ</h1>
+        <div class="hidden-img">
             <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
-        </header>
-    </section>
+        </div>
+    </header>
+</section>
+<section class="main-faq-content">
     <section class="faq-content">
         <article>
             <details>

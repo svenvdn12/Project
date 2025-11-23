@@ -40,7 +40,7 @@ main > section {
 
 .item-grid .item img {
 	aspect-ratio: 1/1;
-	max-width: 100%;
+	max-width: 70%;
 	height: auto;
 	border: var(--border-primary);
 }

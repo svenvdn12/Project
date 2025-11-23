@@ -16,7 +16,6 @@
             <h2>Contact</h2>
             <ul>
                 <li><a href="mailto:hetchaosatelier@gmail.com">hetchaosatelier@gmail.com</a></li>
-                <li><a href="tel:+31 6 17177640">+31 6 17177640</a></li>
             </ul>
             <div class="socials-wrapper">
                 <a href="#"><img src="./assets/icons/brands/social/linked-in.svg" alt="Linked In logo"></a>

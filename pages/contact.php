@@ -1,10 +1,12 @@
-<section class="main-contact-content">
     <section id="contact-section-header">
         <header class="faq-header page-header">
             <h1>CONTACT</h1>
-            <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
+            <div class="hidden-img">
+                <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
+            </div>
         </header>
     </section>
+<section class="main-contact-content">
     <div class="border-content">
         <section class="contact-content">
             <p>Wij staan open voor het beantwoorden van al je vragen, het sparren over je suggesties, en het kennismaken met potentiële samenwerkingspartners.</p>

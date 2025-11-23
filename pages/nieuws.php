@@ -1,7 +1,9 @@
 <section class="content-main-section">
     <header id="content-header" class="news-header">
         <h1>NIEUWS</h1>
-        <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
+        <div class="hidden-img">
+            <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
+        </div>
     </header>
 </section>
 <section id="news-articles">
