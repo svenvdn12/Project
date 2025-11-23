@@ -52,9 +52,11 @@
 #main > .menu li:nth-of-type(6) {
   background-color: hsl(240, 100%, 37.75%);
 }
-
+#main > .menu li:nth-of-type(7) {
+  background-color: hsl(240, 100%, 41.5%);
+}
 #main > .menu li:last-of-type {
-  background-color: var(--color-primary);
+  background-color: hsl(240, 100%, 41.5%);
 }
 
 /*# sourceMappingURL=menu.css.map */

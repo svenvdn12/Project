@@ -1,5 +1,26 @@
 <?php
     declare(strict_types=1);
+    
+    // Start session FIRST, before any output
+    session_start();
+    
+    // Enable error reporting for debugging
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
+    // Load Composer autoloader
+    require_once 'vendor/autoload.php';
+
+    // Load environment variables
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+
+    // Handle logout
+    if (isset($_GET['logout'])) {
+        session_destroy();
+        header('Location: index.php');
+        exit;
+    }
 
     include_once('pages/form-processing/info-processing.php');
     include_once('pages/form-processing/contact-processing.php');
@@ -29,6 +50,9 @@
         case 'nieuws':
             $include = 'nieuws';
             break;
+        case 'login':
+            $include = 'login';
+            break;
         default:
             $include = 'home';
     }
@@ -41,7 +65,8 @@
 		'home',
 		'info',
 		'over-ons',
-		'galerij'
+		'galerij',
+		'login'
 	];
 ?>
 <!DOCTYPE html>
@@ -100,6 +125,11 @@
             <div id="nieuws" class="scroll-anchor plx plx-component">
                 <?php include('pages/nieuws.php') ?>
             </div>
+            <aside class="scroll-anchor stop"><h2>Login</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
+            <aside class="divider"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
+            <div id="login" class="scroll-anchor plx plx-component">
+                <?php include('pages/login.php') ?>
+            </div>
             <?php include('views/footer-plx.php');?>
         </main>
         <main id="main-2">
@@ -110,3 +140,9 @@
         </main>
 	</body>
 </html>
+<?php
+// Flush output buffer
+if (ob_get_length()) {
+    ob_end_flush();
+}
+?>

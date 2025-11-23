@@ -7,6 +7,7 @@
         <li><a href="#contact">Contact</a></li>
         <li><a href="#nieuws">Nieuws</a></li>
         <li><a href="#FAQ">FAQ</a></li>
+        <li><a href="#login">Login</a></li>
         <!-- might be wrong ^ -->
     </ul>
     <aside></aside>
