@@ -4,7 +4,9 @@
     <section>
         <header>
             <h1>ACTIVITEITEN</h1>
-            <img src="../assets/icons/megaphone.svg" alt="megaphone icon">
+            <div class="hidden-img">
+                <img src="../assets/icons/megaphone.svg" alt="megaphone icon">
+            </div>
         </header>
     </section>
     <section>

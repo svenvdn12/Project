@@ -1,7 +1,14 @@
 .home-header {
-    border: none;
-    border-bottom: var(--border-primary);
+    border: var(--border-primary);
+	margin-bottom: 30px;
+	background-color: var(--color-secondary);
 }
+
+.highlight {
+	color: var(--color-accent);
+	font-weight: bold;
+}
+
 #page-content-container {
 	font-size: var(--font-size-l);
 }
@@ -10,15 +17,24 @@
 	border: var(--border-primary);
     gap: 0;
 }
+
 #home-image {
 	width: 100%;
 	height: auto;
-  border-bottom: var(--border-primary);
+	border-bottom: var(--border-primary);
 }
+
 #main-text {
-	text-align: center;
 	padding: var(--padding-gap-primary);
+	background-color: var(--color-secondary);
+	font-size: var(--font-size-m);
 }
+
+#overOnsBtn {
+	text-align: center;
+}
+
+
 #lees-meer-content {
 	display: flex;
 	flex-direction: column;
@@ -29,7 +45,7 @@ h2 {
 }
 .home-content-section {
 	border: 5px solid var(--color-accent);
-	background-color: var(--color-primary);
+	background-color: var(--color-secondary);
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -57,6 +73,7 @@ h2 {
 	#main-text {
 		text-align: start;
 		border-left: var(--border-primary);
+		width: 80%;
 	}
 	#lees-meer-content {
 		gap: var(--padding-gap-primary);
@@ -64,5 +81,44 @@ h2 {
 	}
 	.home-content-section {
 		flex: 1;
+	}
+	#main-text h2 {
+	font-size: 32px;
+	}
+	#main-text h2,
+	#main-text p {
+		margin-top: 15px;
+	}
+
+	#main-text p {
+		font-size: 30px;	
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	#main-text {
+		padding-left: var(--padding-gap-primary);
+	}
+	#main-text h2 {
+		margin-top: 5px;
+		margin-bottom: 5px;
+		line-height: 1.2;
+		width: 100%;
+		white-space: nowrap;
+		font-size: 22px;
+		text-align: left;
+	}
+	#main-text p {
+		margin-bottom: 15px;
+		text-align: left;
+	}
+	#overOnsBtn {
+		margin-top: 30px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.hide {
+		display: none;
 	}
 }

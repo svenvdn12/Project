@@ -1,17 +1,17 @@
 :root {
 	/* colors */
-	--color-primary: #2231b4;
-	--color-secondary: #000061;
+	--color-primary: #ffffff;
+	--color-secondary: #2231b4;
 	--color-accent: #ff611b;
 	--color-accent-hover: #c34400;
 
 	/* typography */
 	--text-color-primary: #ffffff;
 	--text-color-secondary: #ff611b;
-	--font-size-s: 14px;
-	--font-size-m: 15px;
-	--font-size-l: 16px;
-	--font-size-xl: 30px;
+	--font-size-s: 18px;
+	--font-size-m: 19px;
+	--font-size-l: 20px;
+	--font-size-xl: 40px;
 
 	/* spacing */
 	--padding-gap-primary: 20px;
@@ -19,7 +19,7 @@
 	--padding-btn: 10px 20px;
 
 	/* borders */
-	--border-primary: 5px solid #ffffff;
+	--border-primary: 5px solid #ff611b;
 	--border-primary-accent: 5px solid #ff611b;
 	--border-secondary: 1px solid #ffffff;
 	--border-secondary-accent: 1px solid #ff611b;
@@ -113,7 +113,8 @@ hr {
 }
 /* button */
 button,
-.btn {
+.btn,
+.login-button {
 	background-color: var(--color-accent);
 	font-family: 'azeret-mono', monospace;
 	text-decoration: none;
@@ -126,13 +127,18 @@ button,
 	cursor: pointer;
 	font-size: var(--font-size-m);
 	transition: background-color var(--transition), color var(--transition), border var(--transition);
+	border-radius: 10px;
 }
 
 button:hover,
-.btn:hover {
-	background-color: var(--color-accent-hover);
-	color: var(--text-color-primary);
+.btn:hover,
+.login-button:hover {
+	border: 5px solid var(--color-primary);
+	color: var(--color-accent);
+	background-color: var(--color-primary);
+	transition: 0.5s;
 }
+
 
 /* filter button */
 button.filter,
@@ -140,7 +146,7 @@ button.filter,
 button.secondary,
 .btn.secondary {
 	border: var(--border-secondary);
-	background-color: var(--color-primary);
+	background-color: var(--color-accent);
 }
 
 button.filter:hover,
@@ -151,19 +157,30 @@ button.secondary:hover,
 .btn.secondary:hover {
 	border: var(--border-secondary-accent);
 	color: var(--color-accent);
-	background-color: var(--color-primary);
+	background-color: var(--color-secondary);
 }
 
-button.filter.active,
+button.filter:active,
+.btn.filter:active,
+button.filter.active:active,
+.btn.filter.active:active,
+button.secondary:active,
+.btn.secondary:active {
+	border: var(--border-secondary-accent);
+	color: var(--color-accent);
+	background-color: var(--color-secondary);
+}
+
+/* button.filter.active,
 .btn.filter.active {
 	background-color: var(--color-secondary);
 	border: var(--border-secondary-accent);
 	color: var(--color-accent);
-}
-
+} */
+/* 
 .page-header {
 	border-bottom: none;
-}
+} */
 
 /* flex */
 .flex {
@@ -236,6 +253,9 @@ a {
 	color: var(--text-color-primary);
 	width: fit-content;
 	transition: color var(--transition), text-decoration-color var(--transition);
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 a:hover {
@@ -252,7 +272,6 @@ h1 {
 h2 {
 	font-size: var(--font-size-l);
 }
-
 /* p {
 	width: fit-content;
 } */
@@ -285,8 +304,22 @@ form input:not([type='submit']) {
 	flex: 1;
 }
 
+form input:focus, 
+form textarea:focus,
+form select:focus {
+	background-color: var(--color-accent); 
+	color: var(--color-primary);
+	transition: 0.5s;
+}
+
 form input::placeholder {
 	color: var(--color-accent);
+}
+
+form input:focus::placeholder,
+form textarea:focus::placeholder,
+form select:focus::placeholder {
+	color: var(--color-primary);
 }
 
 /* details / summary */
@@ -341,7 +374,6 @@ details:open .details-content {
 
 /* video */
 video {
-	border: var(--border-primary);
 	background-color: var(--color-secondary);
 	aspect-ratio: 16/9;
 }
@@ -394,6 +426,11 @@ video {
 #main-2 {
 	display: none;
 }
+
+	.item-grid .item:nth-last-child(1)::after {
+		content: none;
+	}
+
 @media screen and (min-width: 1000px) {
 	#main > .menu,
 	.divider {
@@ -432,6 +469,9 @@ video {
 
 	#main {
 		display: none;
+	}
+	header h1 {
+		font-size:var(--font-size-xl);
 	}
 	#main-2 {
 		display: flex;
@@ -527,6 +567,11 @@ video {
 	/* missing square fix */
 	.item-grid .item:not(:nth-child(3n + 3))::after {
 		right: -5px; /* border thickness */
+	}
+}
+@media screen and (max-width: 1000px) {
+	.hidden-img {
+		display: none;
 	}
 }
 

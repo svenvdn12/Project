@@ -19,6 +19,7 @@
 	gap: 1.5em;
 	border: var(--border-primary);
 	padding: 1em;
+	background-color: var(--color-secondary);
 }
 
 main {

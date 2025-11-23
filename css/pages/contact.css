@@ -18,6 +18,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
+	background-color: var(--color-secondary);
 }
 
 .contact-content,

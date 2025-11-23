@@ -48,11 +48,15 @@
 	text-align: end;
 	align-self: center;
 }
+.program #info-grid > div > img {
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+}
 .program button {
 	align-self: center;
 	width: 100%;
 }
-
 @media screen and (min-width: 1000px) {
 	.program {
 		display: flex;
@@ -101,7 +105,7 @@
 	}
 	.program .desktop-only {
 		display: inline-block;
-		width: 7.5vw;
+		width: 9.5vw;
 		align-self: flex-end;
 		position: relative;
 		left: 1vw;
@@ -112,6 +116,7 @@
 		left: 0;
 		right: 0.5vw;
 	}
+
 }
 
 /*# sourceMappingURL=program.css.map */

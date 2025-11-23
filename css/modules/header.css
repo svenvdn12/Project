@@ -11,6 +11,9 @@
 	min-height: 100vh;
 } */
 
+.logo {
+	width: 110%;
+}
 
 #page-header .header-top {
 	display: flex;
@@ -140,7 +143,7 @@
 
 /*Key frames*/
 
-@keyframes hamburger-top {
+/* @keyframes hamburger-top {
 	0% {
 		transform: rotateX(90deg);
 		background-color: khaki;
@@ -204,9 +207,9 @@
 	to {
 		transform: translateX(0px);
 	}
-}
+} */
 
-.top {
+/* .top {
 	animation: hamburger-top 1s ease-in;
 }
 
@@ -224,4 +227,4 @@
 
 #header-dropdown-menu ul li {
 	animation: dropdown-items 1s ease-in;
-}
+} */
