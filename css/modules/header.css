@@ -4,7 +4,6 @@
 	left: 0;
 	width: 100%;
 	background-color: var(--color-secondary);
-	box-shadow: var(--shadow-bottom);
 	z-index: 999;
 }
 /* #page-header:has(#hamburger-toggle:checked) {
@@ -21,7 +20,6 @@
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: var(--border-primary);
-	box-shadow: var(--shadow-bottom);
 	background-color: var(--color-secondary);
 	padding: var(--padding-gap-primary);
 }
@@ -118,7 +116,6 @@
 		border-right: var(--border-primary);
 
 		width: 190px;
-		box-shadow: var(--shadow-right);
 		position: fixed;
     height: 100%;
 	}

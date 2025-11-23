@@ -283,7 +283,6 @@ section > header {
 	align-items: center;
 	padding: var(--padding-gap-primary);
 	background-color: var(--color-secondary);
-	box-shadow: var(--shadow-bottom);
 	border: var(--border-primary);
 	width: 100%;
 }
