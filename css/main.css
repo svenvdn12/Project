@@ -277,13 +277,13 @@ h2 {
 } */
 
 section > header {
-	display: flex;
+	/* display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
-	padding: var(--padding-gap-primary);
-	background-color: var(--color-secondary);
-	border: var(--border-primary);
+	align-items: center; */
+	/* padding: var(--padding-gap-primary); */
+	/* background-color: var(--color-secondary);
+	border: var(--border-primary); */
 	width: 100%;
 }
 
@@ -470,7 +470,7 @@ video {
 		display: none;
 	}
 	header h1 {
-		font-size:var(--font-size-xl);
+		font-size: 80.7px;
 	}
 	#main-2 {
 		display: flex;

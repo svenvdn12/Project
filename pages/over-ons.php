@@ -1,5 +1,5 @@
 <!-- section class hidden nog toevoegen. -->
-    <header class="home-header">
+    <header>
         <h1>OVER ONS</h1>
         <div class="hidden-img">
             <img src="./assets/icons/megaphone.svg" alt="megaphone icon">

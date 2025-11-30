@@ -15,9 +15,7 @@ main {
 	flex-wrap: wrap;
 	width: 100%;
 }
-.events-header {
-	border: var(--border-primary);
-}
+
 #category-selector a {
 	width: 100%;
 	text-align: center;

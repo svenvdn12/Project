@@ -1,7 +1,5 @@
 .home-header {
-    border: var(--border-primary);
 	margin-bottom: 30px;
-	background-color: var(--color-secondary);
 }
 
 .highlight {
