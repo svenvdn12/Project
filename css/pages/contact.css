@@ -47,12 +47,14 @@ textarea,
 textarea::placeholder {
 	color: var(--color-accent);
 	font-family: 'azeret-mono', monospace;
+	font-weight: 600;
 }
 
 input,
 textarea {
 	width: 100%;
 	padding: 1em;
+	margin-bottom: 4px;
 }
 
 textarea {

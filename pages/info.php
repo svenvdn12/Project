@@ -1,4 +1,4 @@
-    <header id="content-header" class="home-header">
+    <header>
         <h1>ONTMOETINGS-GROEP</h1>
         <div class="hidden-img">
             <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
