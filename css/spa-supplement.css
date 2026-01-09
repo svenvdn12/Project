@@ -64,7 +64,7 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 }
 
 /* Dit is momenteel even experimenteel - simpel gezged krijgt elke opeenvolgende pagina een iets donkerede background-color via een sass functie */
-.plx-component:nth-of-type(2) {
+/* .plx-component:nth-of-type(2) {
   background-color: hsl(234, 68%, 42%);
 }
 
@@ -86,7 +86,7 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
 
 .plx-component:nth-of-type(7) {
   background-color: hsl(234, 68%, 23.25%);
-}
+} */
 
 @media screen and (min-width: 1000px) {
   .scroll-anchor {

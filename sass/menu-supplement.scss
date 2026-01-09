@@ -48,7 +48,3 @@ $base: colors.$darkToUse;
 	}
 	$base: functions.brighter($base, $numOfItems, $contrastFactor);
 }
-
-#main > .menu li:last-of-type {
-	background-color: var(--color-primary);
-}

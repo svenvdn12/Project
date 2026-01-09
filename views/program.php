@@ -20,8 +20,8 @@
                 <img src="./assets/icons/People.svg" alt="">
                 <h2>7/10</h2>
             </div>
-            <button class="desktop-only">LEES MEER</button>
+            <a href="index.php?page=sign-up" class="btn desktop-only">AANMELDEN</a>
         </div>
-        <button>LEES MEER</button>
+         <button>AANMELDEN</button>
     </section>
 </div>

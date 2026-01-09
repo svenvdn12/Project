@@ -73,4 +73,14 @@ textarea::placeholder {
 	#meeting-form {
 		align-items: normal;
 	}
+	#bekijk-programma {
+		display: inline-flex;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	#mobile-view {
+		font-size: 37px;
+	}
+	
 }

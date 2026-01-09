@@ -114,10 +114,9 @@
 @media screen and (min-width: 1000px) {
 	#page-header {
 		border-right: var(--border-primary);
-
 		width: 190px;
 		position: fixed;
-    height: 100%;
+		height: 100%;
 	}
 
 	#page-header .header-top {

@@ -1,25 +1,14 @@
 <footer id="page-footer">
     <section class="footer-content">
         <section class="footer-col">
-            <h2>Pagina's</h2>
-            <ul>
-                <li><a href="index.php?page=home">Home</a></li>
-                <li><a href="index.php?page=info">Ontmoetingsgroep</a></li>
-                <li><a href="index.php?page=evenementen">Evenementen</a></li>
-                <li><a href="index.php?page=over-ons">Over ons</a></li>
-                <li><a href="index.php?page=contact">Contact</a></li>
-                <li><a href="index.php?page=FAQ">FAQ</a></li>
-                <li><a href="index.php?page=nieuws">Nieuws</a></li>
-            </ul>
-        </section>
-        <section class="footer-col">
             <h2>Contact</h2>
             <ul>
                 <li><a href="mailto:hetchaosatelier@gmail.com">hetchaosatelier@gmail.com</a></li>
             </ul>
             <div class="socials-wrapper">
-                <a href="#"><img src="./assets/icons/brands/social/linked-in.svg" alt="Linked In logo"></a>
-                <a href="#"><img src="./assets/icons/brands/social/instagram.svg" alt="Instagram logo"></a>
+                <a target="_blank" href="https://www.linkedin.com/in/sofia-van-der-knaap-4848062a5/?originalSubdomain=nl"><img src="./assets/icons/brands/social/linked-in.svg" alt="Linked In logo"></a>
+                <a target="_blank" href="https://www.instagram.com/hetchaosatelier/"><img src="./assets/icons/brands/social/instagram.svg" alt="Instagram logo"></a>
+                <a target="_blank" href=""><img src="./assets/icons/brands/social/whatsapp.svg" alt="WhatsApp logo"></a>
             </div>
         </section>
         <section class="footer-col">

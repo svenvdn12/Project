@@ -9,6 +9,13 @@ main {
 	gap: var(--padding-gap-primary);
 }
 
+#coming-soon-text {
+	color: var(--text-color-secondary);
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 15px;
+}
+
 #category-selector {
 	display: flex;
 	gap: 10px;
