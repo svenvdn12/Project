@@ -12,6 +12,13 @@
     <a href="#" class="btn filter">WORKSHOPS</a>
 </section>
 <section id="events">
+    <!-- <section><p id="coming-soon-text">coming soon.....</p><br></br></section> -->
+    <!-- <section><p id="coming-soon-text" class="evenement-links">houd je op de hoogte via:  </p> -->
+        <!-- <div class="socials-wrapper">
+            <a target="_blank" href="https://www.linkedin.com/in/sofia-van-der-knaap-4848062a5/?originalSubdomain=nl"><img src="./assets/icons/brands/social/linked-in.svg" alt="Linked In logo"></a>
+            <a target="_blank" href="https://www.instagram.com/hetchaosatelier/"><img src="./assets/icons/brands/social/instagram.svg" alt="Instagram logo"></a>
+        </div> -->
+    <!-- </section> -->
     <?php include 'views/program.php';?>
     <?php include 'views/program.php';?>
     <?php include 'views/program.php';?>

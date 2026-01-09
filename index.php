@@ -29,6 +29,9 @@
         case 'nieuws':
             $include = 'nieuws';
             break;
+        case 'sign-up':
+            $include = 'sign-up';
+            break;
         default:
             $include = 'home';
     }
@@ -41,7 +44,8 @@
 		'home',
 		'info',
 		'over-ons',
-		'galerij'
+		'galerij',
+        'sign-up'
 	];
 ?>
 <!DOCTYPE html>
@@ -93,6 +97,12 @@
             <aside class="divider"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
             <div id="FAQ" class="scroll-anchor plx plx-component">
                 <?php include('pages/FAQ.php') ?>
+            </div>
+
+            <aside class="scroll-anchor stop"><h2>Aanmelden</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
+            <aside class="divider"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
+            <div id="sign-up" class="scroll-anchor plx plx-component">
+                <?php include('pages/sign-up.php') ?>
             </div>
 
             <aside class="scroll-anchor stop"><h2>Nieuws</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->

@@ -11,3 +11,4 @@
 <link rel="stylesheet" href="css/pages/FAQ.css" />
 <link rel="stylesheet" href="css/pages/nieuws.css" />
 <link rel="stylesheet" href="css/modules/program.css" />
+<link rel="stylesheet" href="css/pages/sign-up.css" />
