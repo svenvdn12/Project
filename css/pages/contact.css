@@ -48,6 +48,7 @@ textarea::placeholder {
 	color: var(--color-accent);
 	font-family: 'azeret-mono', monospace;
 	font-weight: 600;
+	font-size: 17px;
 }
 
 input,

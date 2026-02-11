@@ -19,9 +19,14 @@
             <a target="_blank" href="https://www.instagram.com/hetchaosatelier/"><img src="./assets/icons/brands/social/instagram.svg" alt="Instagram logo"></a>
         </div> -->
     <!-- </section> -->
-    <?php include 'views/program.php';?>
-    <?php include 'views/program.php';?>
-    <?php include 'views/program.php';?>
-    <?php include 'views/program.php';?>
+    <?php 
+    include_once('models/evenementenModel.php');
+    $evenementenModel = new EvenementenModel();
+    $evenementen = $evenementenModel->getEvenementen();
+    
+    foreach ($evenementen as $evenement) {
+        include 'views/program.php';
+    }
+    ?>
 </section>
 <script src="../js/evenementen.js"></script>

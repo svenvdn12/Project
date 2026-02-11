@@ -344,11 +344,12 @@ details summary {
 }
 
 details summary::after {
-	content: url(../assets/icons/arrow-right.svg);
+	content: url(../assets/icons/right-arrow.svg);
 	position: absolute;
-	top: -1px;
-	right: -20px;
+	top: -17px;
+	right: -70px;
 	transition: transform var(--transition);
+	color: var(--color-accent);
 }
 
 details:open summary::after {
@@ -426,6 +427,19 @@ video {
 	display: none;
 }
 
+/* Hide sign-up section on mobile by default */
+#main #sign-up {
+	display: none;
+}
+
+#main #sign-up.show {
+	display: flex;
+}
+
+#main aside[data-for="sign-up"] {
+	display: none;
+}
+
 	.item-grid .item:nth-last-child(1)::after {
 		content: none;
 	}
@@ -434,6 +448,9 @@ video {
 	#main > .menu,
 	.divider {
 		display: none;
+	}
+	.mobile-only {
+		display: none !important;
 	}
 	body {
 		flex-direction: row;
@@ -571,6 +588,9 @@ video {
 @media screen and (max-width: 1000px) {
 	.hidden-img {
 		display: none;
+	}
+	.desktop-only {
+		display: none !important;
 	}
 }
 

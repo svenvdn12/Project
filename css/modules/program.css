@@ -105,7 +105,6 @@
 	}
 	.program .desktop-only {
 		display: inline-block;
-		width: 9.5vw;
 		align-self: flex-end;
 		position: relative;
 		left: 1vw;

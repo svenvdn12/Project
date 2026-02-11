@@ -1,5 +1,6 @@
     <div class="border-content" id="sign-up-content">
     <form action="<?php echo htmlspecialchars("index.php?page=info"); ?>" id="meeting-form" method="post">
+        <input type="hidden" name="event-id" id="event-id-input" value="<?= isset($_GET['id']) ? htmlspecialchars($_GET['id']) : '' ?>" />
         <section id="form-section">
             <div class="form-row2">
                 <input type="text" name="name-signup-input" id="name-signup-input" placeholder="Naam..." value="<?= htmlspecialchars($formData['name']) ?>" />
