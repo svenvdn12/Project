@@ -7,8 +7,13 @@
     </header>
 </section>
 <section id="news-articles">
-    <?php include './views/program.php';?>
-    <?php include './views/program.php';?>
-    <?php include './views/program.php';?>
-    <?php include './views/program.php';?>
+    <?php 
+    include_once('models/evenementenModel.php');
+    $evenementenModel = new EvenementenModel();
+    $evenementen = $evenementenModel->getEvenementen();
+    
+    foreach ($evenementen as $evenement) {
+        include './views/program.php';
+    }
+    ?>
 </section>

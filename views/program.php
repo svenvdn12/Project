@@ -1,27 +1,31 @@
 <div class="program">
-    <img src="./assets/images/chaos-atelier-leiden.jpg" width="357" height="200" alt="">
+    <img src="<?php echo htmlspecialchars($evenement['image']); ?>" width="357" height="200" alt="<?php echo htmlspecialchars($evenement['title']); ?>">
     <section>
-        <h2>Program</h2>
-        <p>Als je dit leest heb je waarschijnlijk per ongeluk de template program module ingeladen :]</p>
+        <h2><?php echo htmlspecialchars($evenement['title']); ?></h2>
+        <p><?php echo htmlspecialchars($evenement['text']); ?></p>
         <div id="info-grid">
             <div>
                 <img src="./assets/icons/Calendar.svg" alt="">
-                <h2>15-7-2025</h2>
+                <h2><?php echo date('d-m-Y', strtotime($evenement['date'])); ?></h2>
             </div>
             <div>
                 <img src="./assets/icons/Clock.svg" alt="">
-                <h2>19:00</h2>
+                <h2><?php echo htmlspecialchars($evenement['time']); ?></h2>
             </div>
             <div>
                 <img src="./assets/icons/Vector.svg" alt="">
-                <h2>Leiden</h2>
+                <h2><?php echo htmlspecialchars($evenement['location']); ?></h2>
             </div>
             <div>
                 <img src="./assets/icons/People.svg" alt="">
-                <h2>7/10</h2>
+                <h2><?php echo htmlspecialchars($evenement['capacity']); ?></h2>
             </div>
-            <a href="index.php?page=sign-up" class="btn desktop-only">AANMELDEN</a>
+            <?php if (isset($_GET['page']) && $_GET['page'] === 'evenementen') { ?>
+            <a href="index.php?page=sign-up&id=<?php echo $evenement['id']; ?>" class="btn desktop-only">AANMELDEN</a>
+            <?php } else {?>
+            <a href="index.php?page=evenementen" class="btn desktop-only">Lees Meer</a>
+            <?php } ?>
         </div>
-         <button>AANMELDEN</button>
+         <button class="btn-aanmelden mobile-only" data-event-id="<?php echo $evenement['id']; ?>">AANMELDEN</button>
     </section>
 </div>

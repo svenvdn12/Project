@@ -6,7 +6,7 @@
     </header>
     <section id="content-main-section" class="welkom">
     <section class="home-section-1">
-        <img src="./assets/images/main.jpg" alt="placeholder" id="home-image" width="400" height="600">
+        <img src="./assets/images/main.jpg" alt="placeholder" id="home-image">
         <section id="main-text">
             <p>wij geloven</p>
             <h2>chaos = <span class="highlight">creativiteit</span></h2>

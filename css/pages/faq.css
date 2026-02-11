@@ -32,7 +32,6 @@ main {
 /* main {
 	min-width: 100%;
 } */
-
 h2 {
 	display: inline-block;
 	/* margin-right: 0.5em; */
@@ -46,6 +45,10 @@ p {
 	margin-bottom: 0.7em;
 }
 
+details summary::after .no-confirmation {
+	right: -20px;
+}
+
 @media screen and (min-width: 1000px) {
 	.faq-header {
 		justify-content: space-between;
@@ -57,5 +60,8 @@ p {
 
 	p {
 		text-align: left;
+	}
+	#info-grid h2 {
+		font-size: 1.1em;
 	}
 }

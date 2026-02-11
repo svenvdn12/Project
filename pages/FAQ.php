@@ -38,7 +38,7 @@
         </article>
         <article>
             <details>
-                <summary>
+                <summary class="no-confirmation">
                     <h2>Ik heb geen bevestiging gekregen?</h2>
                 </summary>
                 <p>Heb je geen bevestigingsbericht gekregen van jouw deelname? Check dan even je spambox, of stuur ons een berichtje.</p>

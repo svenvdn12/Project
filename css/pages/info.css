@@ -58,6 +58,12 @@ textarea::placeholder {
 	margin-top: 1em;
 }
 
+.images-ontmoetingsgroep {
+	display: flex;
+	flex-direction: row;
+	gap: 2em;
+}
+
 @media screen and (min-width: 1000px) {
 	main {
 		text-align: start;
@@ -82,5 +88,7 @@ textarea::placeholder {
 	#mobile-view {
 		font-size: 37px;
 	}
-	
+	#hidden-images {
+		display: none;
+	}
 }

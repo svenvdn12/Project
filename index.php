@@ -99,8 +99,8 @@
                 <?php include('pages/FAQ.php') ?>
             </div>
 
-            <aside class="scroll-anchor stop"><h2>Aanmelden</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
-            <aside class="divider"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
+            <aside class="scroll-anchor stop" data-for="sign-up"><h2>Aanmelden</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
+            <aside class="divider" data-for="sign-up"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
             <div id="sign-up" class="scroll-anchor plx plx-component">
                 <?php include('pages/sign-up.php') ?>
             </div>
