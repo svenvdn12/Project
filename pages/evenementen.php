@@ -6,27 +6,25 @@
         </div>
     </header>
 </section>
+<?php if (isset($_GET['success']) && $_GET['success'] == '1'): ?>
+    <div class="success-message" style="background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 12px; margin: 20px; border-radius: 4px; text-align: center;">
+        ✓ Je aanmelding is succesvol verzonden! We nemen binnenkort contact met je op.
+    </div>
+<?php endif; ?>
 <section id="category-selector">
     <a href="#" class="btn filter">UITSTAPJES</a>
     <a href="#" class="btn filter">ONTMOETINGSGROEP</a>
     <a href="#" class="btn filter">WORKSHOPS</a>
 </section>
 <section id="events">
-    <!-- <section><p id="coming-soon-text">coming soon.....</p><br></br></section> -->
-    <!-- <section><p id="coming-soon-text" class="evenement-links">houd je op de hoogte via:  </p> -->
-        <!-- <div class="socials-wrapper">
-            <a target="_blank" href="https://www.linkedin.com/in/sofia-van-der-knaap-4848062a5/?originalSubdomain=nl"><img src="./assets/icons/brands/social/linked-in.svg" alt="Linked In logo"></a>
-            <a target="_blank" href="https://www.instagram.com/hetchaosatelier/"><img src="./assets/icons/brands/social/instagram.svg" alt="Instagram logo"></a>
-        </div> -->
-    <!-- </section> -->
     <?php 
     include_once('models/evenementenModel.php');
-    $evenementenModel = new EvenementenModel();
+    $evenementenModel = new EvenementenModel($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], $_ENV['DB_DATABASE']);
     $evenementen = $evenementenModel->getEvenementen();
     
     foreach ($evenementen as $evenement) {
         include 'views/program.php';
     }
     ?>
+    
 </section>
-<script src="../js/evenementen.js"></script>

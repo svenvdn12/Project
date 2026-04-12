@@ -48,7 +48,7 @@ textarea::placeholder {
 	color: var(--color-accent);
 	font-family: 'azeret-mono', monospace;
 	font-weight: 600;
-	font-size: 17px;
+	font-size: 15px;
 }
 
 input,
@@ -80,4 +80,10 @@ textarea {
 	.error {
 		text-align: left;
 	}
+	input,
+	textarea,
+	textarea::placeholder {
+	font-size: 18px;
+}
+
 }

@@ -102,6 +102,24 @@ Alle nieuwe pagina's in main moeten deze en plx-component toegewezen krijgen */
   .divider {
     display: none;
   }
+  
+  /* Always show sign-up section on desktop when active */
+  #main #sign-up.show {
+    display: flex !important;
+  }
+  
+  #main aside[data-for="sign-up"] {
+    display: none !important;
+  }
+  
+  /* Always show participants section on desktop when active */
+  #main #aanmeldingen.show {
+    display: flex !important;
+  }
+  
+  #main aside[data-for="participants"] {
+    display: none !important;
+  }
 }
 
 /*# sourceMappingURL=spa-supplement.css.map */

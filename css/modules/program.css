@@ -112,8 +112,13 @@
 }
 @media screen and (max-width: 1800px) {
 	.program .desktop-only {
-		left: 0;
+		left: 12px;
 		right: 0.5vw;
+	}
+	.program #info-grid > div > img,
+	.program #info-grid > div > h2 {
+	font-size: 1em;
+	align-self: auto;
 	}
 
 }

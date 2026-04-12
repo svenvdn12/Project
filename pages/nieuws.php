@@ -9,7 +9,7 @@
 <section id="news-articles">
     <?php 
     include_once('models/evenementenModel.php');
-    $evenementenModel = new EvenementenModel();
+    $evenementenModel = new EvenementenModel($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], $_ENV['DB_DATABASE']);
     $evenementen = $evenementenModel->getEvenementen();
     
     foreach ($evenementen as $evenement) {

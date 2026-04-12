@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+include_once('models/signUpModel.php');
+
 $formData = [
     'name' => '',
     'email' => '',
@@ -18,49 +20,84 @@ $formData = [
 ];
 
 if (isset($_POST['info-submit'])) {
-
-    // Name
-    if (!empty($_POST['name-signup-input'])) {
-        $formData['name'] = trim($_POST['name-signup-input']);
-    } else {
-        $formData['errors']['name'] = 'Naam is verplicht.';
-    }
-
-    // Email
-    if (!empty($_POST['email-signup-input'])) {
-        $formData['email'] = trim($_POST['email-signup-input']);
-        if (!filter_var($formData['email'], FILTER_VALIDATE_EMAIL)) {
-            $formData['errors']['email'] = 'Dit is een ongeldige email.';
+    
+    // Create SignUpModel instance for database operations
+    try {
+        $signUpModel = new SignUpModel($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], $_ENV['DB_DATABASE']);
+        
+        // Get and validate form data
+        $name = trim($_POST['name-signup-input'] ?? '');
+        $email = trim($_POST['email-signup-input'] ?? '');
+        $age = trim($_POST['age-signup-input'] ?? '');
+        $reason = trim($_POST['reason-signup-input'] ?? '');
+        $source = trim($_POST['source-signup-input'] ?? '');
+        $note = trim($_POST['note-signup-input'] ?? '');
+        $eventId = trim($_POST['event-id'] ?? '');
+        
+        // Validation
+        $errors = [];
+        
+        // Name validation
+        if (empty($name)) {
+            $errors['name'] = 'Naam is verplicht.';
         }
-    } else {
-        $formData['errors']['email'] = 'Email is verplicht.';
-    }
-
-    // Age
-    if (!empty($_POST['age-signup-input'])) {
-        $formData['age'] = intval($_POST['age-signup-input']);
-        if ($formData['age'] <= 0) {
-            $formData['errors']['age'] = 'Voer een geldig nummer in.';
+        
+        if (empty($email)) {
+            $errors['email'] = 'Email is verplicht.';
+        } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errors['email'] = 'Dit is een ongeldige email.';
         }
-    }
+        
 
-    // Reason
-    if (!empty($_POST['reason-signup-input'])) {
-        $formData['reason'] = trim($_POST['reason-signup-input']);
-    } else {
-        $formData['errors']['reason'] = 'Geen reden ingevuld.';
-    }
+        if (empty($age)) {
+            $errors['age'] = 'Leeftijd is verplicht.';
+        } elseif (!is_numeric($age) || (int)$age < 18) {
+            $errors['age'] = 'Je moet minimaal 18 jaar oud zijn.';
+        }
+        
 
-    // Source
-    if (!empty($_POST['source-signup-input'])) {
-        $formData['source'] = trim($_POST['source-signup-input']);
-    } else {
-        $formData['errors']['source'] = 'Geen bron ingevuld.';
-    }
+        if (empty($reason)) {
+            $errors['reason'] = 'Geen reden ingevuld.';
+        }
+        
 
-    // Note (optional)
-    if (isset($_POST['note-signup-input'])) {
-        $formData['note'] = trim($_POST['note-signup-input']);
+        if (empty($source)) {
+            $errors['source'] = 'Geen bron ingevuld.';
+        }
+        
+        if (empty($errors)) {
+            $participantData = [
+                'name' => $name,
+                'email' => $email,
+                'age' => (int)$age,
+                'reason' => $reason,
+                'source' => $source,
+                'note' => $note,
+                'event_id' => (int)$eventId,
+                'submitted_at' => date('Y-m-d H:i:s')
+            ];
+            
+            // Save to database
+            if ($signUpModel->saveParticipant($participantData)) {
+                // Success - redirect to success page
+                header('Location: index.php?page=evenementen&success=1');
+                exit();
+            } else {
+                $errors['general'] = 'Er is een fout opgetreden bij het opslaan. Probeer het opnieuw.';
+            }
+        }
+        
+        // Store errors and form data for display
+        $formData['errors'] = $errors;
+        $formData['name'] = $name;
+        $formData['email'] = $email;
+        $formData['age'] = $age;
+        $formData['reason'] = $reason;
+        $formData['source'] = $source;
+        $formData['note'] = $note;
+        
+    } catch (Exception $e) {
+        $formData['errors']['general'] = 'Database verbinding mislukt: ' . $e->getMessage();
     }
 }
 ?>

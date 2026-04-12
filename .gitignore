@@ -1,2 +1,22 @@
 #pretierrc
 .prettierrc
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.staging
+
+# Composer dependencies
+vendor/
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
