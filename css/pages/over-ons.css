@@ -22,22 +22,50 @@ main > section {
 	gap: 1em;
 }
 
+.border-content p {
+	line-height: 2em;
+}
+
 .mogelijk-gemaakt-door > h2 {
 	margin-top: var(--padding-gap-primary);
 	margin-bottom: var(--padding-gap-primary);
+	color: var(--color-accent);
+}
+.belangrijk h3 {
+	margin-top: 18px;
+	font-weight: 700;
+	color: var(--color-accent);
+}
+
+.belangrijk p {
+	margin-top: 14px;
+}
+
+.nieuwe-blik, .nieuwe-blik p {
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 @media screen and (min-width: 1000px) {
 	main > section {
-		align-items: start;
 		text-align: start;
 	}
 
 	.hidden {
 		max-width: 35vw;
 	}
-}
 
+	.border-content h2 {
+		font-size: 36px;
+	}
+
+	.mogelijk-gemaakt-door > h2 {
+		font-size: 36px;
+	}
+	.belangrijk h3 {
+		font-size: 25px;
+	}
+}
 .item-grid .item img {
 	aspect-ratio: 1/1;
 	max-width: 70%;

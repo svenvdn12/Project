@@ -110,7 +110,7 @@
 		left: 1vw;
 	}
 }
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1000px) {
 	.program .desktop-only {
 		left: 12px;
 		right: 0.5vw;

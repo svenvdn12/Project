@@ -1,18 +1,18 @@
     <header>
-        <h1 id="mobile-view">ONTMOETINGSGROEP</h1>
+        <h1 id="mobile-view">Ontmoetingsgroep</h1>
         <div class="hidden-img">
             <img src="./assets/icons/megaphone.svg" alt="megaphone icon">
         </div>
     </header>
 <section>
     <div class="border-content">
-    
+    <h2>Ontmoetingsgroepen: Herkenning zonder labels.</h2>
     <p>placeholder datum en locatie</p>
     <section class="info-text">
-        <p>De ontmoetingsgroep is een serie van 10 bijeenkomsten, waar we steeds over een ander thema in gesprek gaan. Denk aan emoties, keuzes maken en identiteit. We zorgen samen voor een veilige omgeving, waaring het uitwisselen van ervaringen centraal staat.</p>
-        <p>De ontmoetingsgroep is voor jongvolwassenen (plusminus 18 - 30 jaar) die zich herkenne in neurodivergentie en graag in gesprek gaan met gelijkgestmden</p>
-        <p>Of je nou kort geleden gediagnosticeerd bent en opzoek bent naar wat dat voor jou betekent, je niks met labels hebt en gewoon iets wil doen met die chaos in je hoofd, of een doorgewinterde neurodivergent bent die graag diens wijsheid deelt.</p>
-        <p>Ik vraag NIET om een officiële diagnose.</p>
+        <p>De ontmoetingsgroep is het hart van Het Chaos Atelier.
+        Het is een serie van 10 bijeenkomsten waarin we met een vaste groep gelijkgestemden (maximaal 8 deelnemers) in
+        gesprek gaan. Samen creëren we een veilige basis om ervaringen uit te wisselen, talenten
+        te herkennen en te ontdekken hoe jij jouw 'chaos' inzet als kracht.</p>
     </section>
     <div class="images-ontmoetingsgroep">
         <img src="./assets/images/info-picture-2.jpg" alt="placeholder" width="310" id="info-image">
