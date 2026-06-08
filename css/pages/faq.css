@@ -29,14 +29,9 @@ main {
 	min-width: 100%;
 }
 
-/* main {
-	min-width: 100%;
-} */
 h2 {
 	display: inline-block;
-	/* margin-right: 0.5em; */
-	/* font-size: var(--font-size-xl); */
-	font-size: 1.3em;
+	font-size: 1.1em;
 	max-width: 75vw;
 }
 
@@ -47,6 +42,13 @@ p {
 
 details summary::after .no-confirmation {
 	right: -20px;
+}
+
+.section-1 h2, .section-1 details summary::after,
+.section-2 h2, .section-2 details summary::after,
+.section-3 h2, .section-3 details summary::after {
+	line-height: 2em;
+	margin-top: 20px;
 }
 
 @media screen and (min-width: 1000px) {
@@ -63,5 +65,37 @@ details summary::after .no-confirmation {
 	}
 	#info-grid h2 {
 		font-size: 1.1em;
+	}
+	
+	.section-1 .title,
+	.section-2 .title,
+	.section-3 .title {
+		font-size: 1.5em;
+	}
+
+}
+
+@media screen and (max-width: 1000px) {
+	h2 {
+		margin-bottom: 15px;
+	}
+
+	/* Mobile-specific arrow positioning */
+	details summary {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	details summary::after {
+		position: static;
+		transform: rotate(90deg); /* Point downward initially */
+		transition: transform var(--transition);
+		margin-top: 10px;
+	}
+
+	details:open summary::after {
+		transform: rotate(-90deg); /* Point upward when opened */
 	}
 }

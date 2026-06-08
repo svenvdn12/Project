@@ -430,14 +430,35 @@ video {
 /* Hide sign-up section on mobile by default */
 #main #sign-up {
 	display: none;
+	opacity: 0;
+	transition: opacity 0.3s ease;
 }
 
 #main #sign-up.show {
-	display: flex;
+	display: block;
+	opacity: 1;
 }
 
 #main aside[data-for="sign-up"] {
 	display: none;
+	transition: all 0.3s ease;
+}
+
+/* Hide participants section on mobile by default */
+#main #aanmeldingen {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+#main #aanmeldingen.show {
+	display: block;
+	opacity: 1;
+}
+
+#main aside[data-for="participants"] {
+	display: none;
+	transition: all 0.3s ease;
 }
 
 	.item-grid .item:nth-last-child(1)::after {
@@ -592,6 +613,9 @@ video {
 	.desktop-only {
 		display: none !important;
 	}
+	/* details summary::after {
+		content: url(../assets/icons.);
+	} */
 }
 
 /* for example / testing purposes */
@@ -604,4 +628,38 @@ video {
 	justify-content: center;
 	align-items: center;
 	padding: var(--padding-gap-primary);
+}
+
+/* Success notification */
+.success-notification {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	background-color: #28a745;
+	color: white;
+	padding: 15px 25px;
+	border-radius: 10px;
+	font-weight: bold;
+	z-index: 9999;
+	cursor: pointer;
+	box-shadow: var(--shadow-bottom);
+	animation: slideInRight 0.5s ease-out;
+	max-width: 300px;
+	font-family: 'azeret-mono', monospace;
+	border: 2px solid #155724;
+}
+
+.success-notification:hover {
+	background-color: #218838;
+}
+
+@keyframes slideInRight {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
 }

@@ -1,10 +1,27 @@
 <?php
     declare(strict_types=1);
 
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
+    require_once __DIR__ . '/vendor/autoload.php';
+
+    try {
+        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+    } catch (Exception $e) {
+        die('Error loading .env file: ' . $e->getMessage());
+    }
+
     include_once('pages/form-processing/info-processing.php');
     include_once('pages/form-processing/contact-processing.php');
+    include_once('pages/form-processing/login-processing.php');
+    include_once('models/loginModel.php');
 
-    if (!isset($_GET['page'])) {   
+    $loginModel = new LoginModel($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], $_ENV['DB_DATABASE']);
+    $isAdmin = $loginModel->isAdmin();
+
+    if (!isset($_GET['page'])) {
         $_GET['page'] = 'home';
     }
     switch($_GET['page']) {
@@ -32,11 +49,35 @@
         case 'sign-up':
             $include = 'sign-up';
             break;
+        case 'participants':
+            // Check if user is admin before allowing access
+            include_once('models/loginModel.php');
+            $loginModel = new LoginModel($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], $_ENV['DB_DATABASE']);
+            if (!$loginModel->isAdmin()) {
+                $include = 'home'; // Redirect to home if not admin
+            } else {
+                $include = 'participants';
+            }
+            break;
+        case 'login':
+            $include = 'login';
+            break;
+        case 'logout':
+            include_once('models/loginModel.php');
+            $loginModel = new LoginModel($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], $_ENV['DB_DATABASE']);
+            $loginModel->logout();
+            header('Location: index.php?page=home');
+            exit();
+            break;
+        case 'success':
+            $include = 'home';
+            $signupSuccess = true;
+            break;
         default:
             $include = 'home';
     }
 
-	$allowedUrls = 
+	$allowedUrls =
 	[
 		'contact',
 		'evenementen',
@@ -45,7 +86,9 @@
 		'info',
 		'over-ons',
 		'galerij',
-        'sign-up'
+        'sign-up',
+        'participants',
+        'login'
 	];
 ?>
 <!DOCTYPE html>
@@ -58,6 +101,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
         <?php include_once('views/styles.php');?>
 		<script src="js/spa-menu-function.js" defer></script>
+		<script>
+			// Pass PHP variables to JavaScript
+			window.signupSuccess = <?php echo isset($signupSuccess) && $signupSuccess ? 'true' : 'false'; ?>;
+			window.isAdmin = <?php echo isset($isAdmin) && $isAdmin ? 'true' : 'false'; ?>;
+			window.showParticipants = <?php echo isset($showParticipants) && $showParticipants ? 'true' : 'false'; ?>;
+			
+			// Pass events data for mobile signup functionality
+			<?php 
+			include_once('models/evenementenModel.php');
+			$evenementenModel = new EvenementenModel($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], $_ENV['DB_DATABASE']);
+			$allEvents = $evenementenModel->getEvenementen();
+			?>
+			window.eventsData = <?php echo json_encode($allEvents); ?>;
+		</script>
 	</head>
 	<body>
         <?php include_once 'views/header.php';?>
@@ -110,6 +167,24 @@
             <div id="nieuws" class="scroll-anchor plx plx-component">
                 <?php include('pages/nieuws.php') ?>
             </div>
+
+            <aside class="scroll-anchor stop"><h2>Inloggen</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
+            <aside class="divider"></aside> <!-- Deze twee elementen moeten tussen elke content container, behalve tussen het hamburger menu en de welkomstpagina -->
+            <div id="login" class="scroll-anchor plx plx-component">
+                <?php include('pages/login.php') ?>
+            </div>
+
+            <?php
+            // Only show aanmeldingen section for admins when they've clicked on a specific participant page
+
+            $showParticipants = $isAdmin && isset($_GET['id']) && $_GET['page'] === 'participants';
+            ?>
+            <aside class="scroll-anchor stop" data-for="participants"><h2>Aanmeldingen</h2></aside> <!-- Vul de H2 met de naam van de volgende pagina-->
+            <aside class="divider" data-for="participants"></aside>
+            <div id="aanmeldingen" class="scroll-anchor plx plx-component">
+                <?php if ($showParticipants) { include('pages/participants.php'); } ?>
+            </div>
+
             <?php include('views/footer-plx.php');?>
         </main>
         <main id="main-2">

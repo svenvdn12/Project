@@ -1,3 +1,6 @@
-#sign-up-content {
-   width: 100%;
+@media screen and (max-width: 1000px) {
+   #signup-title{
+      font-size: 32px;
+      margin-bottom: 0.5em;
+}
 }

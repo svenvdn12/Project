@@ -8,7 +8,7 @@
             <div class="socials-wrapper">
                 <a target="_blank" href="https://www.linkedin.com/in/sofia-van-der-knaap-4848062a5/?originalSubdomain=nl"><img src="./assets/icons/brands/social/linked-in.svg" alt="Linked In logo"></a>
                 <a target="_blank" href="https://www.instagram.com/hetchaosatelier/"><img src="./assets/icons/brands/social/instagram.svg" alt="Instagram logo"></a>
-                <a target="_blank" href=""><img src="./assets/icons/brands/social/whatsapp.svg" alt="WhatsApp logo"></a>
+                <a target="_blank" href="https://chat.whatsapp.com/Ji5LMAyK5tp5lSvz1h71mg"><img src="./assets/icons/brands/social/whatsapp.svg" alt="WhatsApp logo"></a>
             </div>
         </section>
         <section class="footer-col">

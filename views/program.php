@@ -1,3 +1,6 @@
+<?php
+$loginModel = new LoginModel($_ENV['DB_HOST'], $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD'], $_ENV['DB_DATABASE']);
+?>
 <div class="program">
     <img src="<?php echo htmlspecialchars($evenement['image']); ?>" width="357" height="200" alt="<?php echo htmlspecialchars($evenement['title']); ?>">
     <section>
@@ -17,7 +20,8 @@
                 <h2><?php echo htmlspecialchars($evenement['location']); ?></h2>
             </div>
             <div>
-                <img src="./assets/icons/People.svg" alt="">
+                <?php if ($loginModel->isAdmin()) { ?>
+                <a href="index.php?page=participants&id=<?php echo $evenement['id']; ?>" class="participants-link" data-event-id="<?php echo $evenement['id']; ?>"><?php } ?><img src="./assets/icons/People.svg" alt=""><?php if ($loginModel->isAdmin()) { ?></a> <?php } ?>
                 <h2><?php echo htmlspecialchars($evenement['capacity']); ?></h2>
             </div>
             <?php if (isset($_GET['page']) && $_GET['page'] === 'evenementen') { ?>

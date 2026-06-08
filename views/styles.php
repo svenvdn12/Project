@@ -12,3 +12,5 @@
 <link rel="stylesheet" href="css/pages/nieuws.css" />
 <link rel="stylesheet" href="css/modules/program.css" />
 <link rel="stylesheet" href="css/pages/sign-up.css" />
+<link rel="stylesheet" href="css/pages/participants.css" />
+<link rel="stylesheet" href="css/pages/login.css" />

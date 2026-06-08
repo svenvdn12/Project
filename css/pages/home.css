@@ -1,5 +1,7 @@
-.home-header {
-	margin-bottom: 15px;
+#welkom-text {
+	color: var(--color-accent);
+	font-weight: bold;
+	margin-top: 25px;
 }
 
 .highlight {
@@ -23,10 +25,19 @@
     object-fit: cover;
 }
 
-#main-text {
+#wie-we-zijn {
+	margin: 18px 0px 18px 0px;
+}
+
+#main-text, #main-text-2 {
 	padding: var(--padding-gap-primary);
 	background-color: var(--color-secondary);
 	font-size: var(--font-size-m);
+	border: var(--border-primary);
+}
+
+#main-text-2 h1 {
+	margin-bottom: 30px;
 }
 
 #overOnsBtn {
@@ -78,13 +89,12 @@ h2 {
     }
 	#main-text {
 		text-align: start;
-		border: var(--border-primary);
 		width: 47.4%;
 	}
 	#lees-meer-content {
 		gap: var(--padding-gap-primary);
 		flex-direction: row;
-		margin-top: 20px;
+		margin-bottom: 18px;
 	}
 	.home-content-section {
 		flex: 1;
@@ -108,7 +118,6 @@ h2 {
 @media screen and (max-width: 1000px) {
 	#main-text {
 		padding-left: var(--padding-gap-primary);
-		border: var(--border-primary);
 		padding-top: 12px;
 	}
 	#main-text h2 {
@@ -120,9 +129,17 @@ h2 {
 		font-size: 22px;
 		text-align: left;
 	}
+	#main-text-2 h1 {
+		font-size: 28px;
+	}
 	#main-text p {
 		margin-bottom: 15px;
 		text-align: left;
+	}
+	#main-text-2 p,
+	.home-content-section p {
+		text-align: left;
+		margin-left: 7px;
 	}
 	#overOnsBtn {
 		margin-top: 30px;

@@ -86,9 +86,12 @@ textarea::placeholder {
 
 @media screen and (max-width: 1000px) {
 	#mobile-view {
-		font-size: 37px;
+		font-size: 33px;
 	}
 	#hidden-images {
 		display: none;
+	}
+	.info-text {
+		text-align: left;
 	}
 }
